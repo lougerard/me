@@ -28,13 +28,13 @@ THM Room [https://tryhackme.com/room/burpsuitebasics](https://tryhackme.com/room
 15. [TASK 15 : Room Conclusion](#Conclusion)
 
 
-## **TASK 1 : Outline** <a name="Outline"></a>
+## TASK 1 : Outline <a name="Outline"></a>
 
   Deploy the machine attached to the TASK by pressing the green "Start Machine" button, as well as the AttackBox (using the "Start AttackBox" button at the top of the page) if you are not using your own machine
     
 No Answer  
 
-## **TASK 2 : What is Burp Suite ?** <a name="What"></a>
+## TASK 2 : What is Burp Suite ? <a name="What"></a>
 
   Which edition of Burp Suite will we be using in this module ?
     
@@ -47,7 +47,7 @@ Answer : Burp Suite Enterprise
 
 Answer : Mobile  
 
-## **TASK 3 : Features of Burp Community** <a name="Features"></a>
+## TASK 3 : Features of Burp Community <a name="Features"></a>
 
   Which Burp Suite feature allows us to intercept requests between ourselves and the target ?
 
@@ -61,28 +61,28 @@ Answer : Proxy
 
 Answer : Intruder  
 
-## **TASK 4 : Installation** <a name="Installation"></a>
+## TASK 4 : Installation <a name="Installation"></a>
 
   If you have chosen not to use the AttackBox, make sure that you have a copy of Burp Suite installed before proceeding.
     
 
 No Answer  
 
-## **TASK 5 : The Dashnoard** <a name="Dashnoard"></a>
+## TASK 5 : The Dashnoard <a name="Dashnoard"></a>
 
   Open Burp Suite and have a look around the dashboard. Make sure that you are comfortable with it before moving on.
     
 
 No Answer
 
-## **TASK 6 : Navigation** <a name="Navigation"></a>
+## TASK 6 : Navigation <a name="Navigation"></a>
 
   Get comfortable navigating around the top menu bars.
     
 
 No Answer  
 
-## **TASK 7 : Options** <a name="Options"></a>
+## TASK 7 : Options <a name="Options"></a>
 
   Change the Burp Suite theme to dark mode
     
@@ -114,7 +114,7 @@ Answer : AYE
 
 No Answer  
 
-## **TASK 8 : Introduction to the Burp Proxy** <a name="BurpProxy"></a>
+## TASK 8 : Introduction to the Burp Proxy <a name="BurpProxy"></a>
 
   Which button would we choose to send an intercepted request to the target in Burp Proxy ?
 
@@ -126,7 +126,7 @@ Answer : Forward
 
 Answer : ctrl+f
 
-## **TASK 9 : Connecting through the Proxy (FoxyProxy)** <a name="Connecting"></a>
+## TASK 9 : Connecting through the Proxy (FoxyProxy) <a name="Connecting"></a>
 
   Read through the options in the right-click menu. There is one particularly useful option that allows you to intercept and modify the response to your request. What is this option ?
 
@@ -141,27 +141,27 @@ Answer : Response to this request
 
 No Answer  
 
-## **TASK 10 : Proxying HTTPS** <a name="Proxying"></a>
+## TASK 10 : Proxying HTTPS <a name="Proxying"></a>
 
   If you are not using the AttackBox, configure Firefox (or your browser of choice) to accept the Portswigger CA certificate for TLS communication through the Burp Proxy.
     
 
 No Answer  
 
-## **TASK 11 : The Burp Suite Browser** <a name="Browser"></a>
+## TASK 11 : The Burp Suite Browser <a name="Browser"></a>
 
   Using the in-built browser, make a request to http://10.10.7.65/ and capture it in the proxy.
     
 
 No Answer
 
-## **TASK 12 : Scoping and Targeting** <a name="Scoping"></a>
+## TASK 12 : Scoping and Targeting <a name="Scoping"></a>
 
   Add http://10.10.7.65/ to your scope and change the Proxy settings to only intercept traffic to in-scope targets. See the difference between the amount of traffic getting caught by the proxy before and after limiting the scope.
     
 No Answer
 
-## **TASK 13 : Site Map and Issue Definitions** <a name="SiteMap"></a>
+## TASK 13 : Site Map and Issue Definitions <a name="SiteMap"></a>
 
   Take a look around the site on http://10.10.7.65/ -- we will be using this a lot throughout the module. Visit every page linked to from the homepage, then check your sitemap -- one endpoint should stand out as being very unusual !  Visit this in your browser (or use the "Response" section of the site map entry for that endpoint)  What is the flag you receive?
     
@@ -175,7 +175,7 @@ Just search about "Vulnerable JavaScript dependency" in the Issue Definitions li
 
 Answer : Low  
 
-## **TASK 14 : Example Attack** <a name="Attack"></a>
+## TASK 14 : Example Attack <a name="Attack"></a>
 
   Try typing: &lt;script  alert("Succ3ssful XSS")&lt;/script  , into the "Contact Email" field. You should find that there is a client-side filter in place which prevents you from adding any special characters that aren't allowed in email addresses :
     
@@ -203,7 +203,7 @@ No Answer
 
 No Answer  
 
-## **TASK 15 : Room Conclusion** <a name="Conclusion"></a>
+## TASK 15 : Room Conclusion <a name="Conclusion"></a>
 
   I understand the fundamentals of using Burp Suite!
     
