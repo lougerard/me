@@ -30,20 +30,20 @@ THM Room [https://tryhackme.com/room/burpsuitebasics](https://tryhackme.com/room
 
 ## TASK 1 : Outline <a name="Outline"></a>
 
-  Deploy the machine attached to the TASK by pressing the green "Start Machine" button, as well as the AttackBox (using the "Start AttackBox" button at the top of the page) if you are not using your own machine
+  ### Deploy the machine attached to the TASK by pressing the green "Start Machine" button, as well as the AttackBox (using the "Start AttackBox" button at the top of the page) if you are not using your own machine
     
 No Answer  
 
 ## TASK 2 : What is Burp Suite ? <a name="What"></a>
 
-  Which edition of Burp Suite will we be using in this module ?
+  ### Which edition of Burp Suite will we be using in this module ?
     
 Answer : Burp Suite Community  
 
-  Which edition of Burp Suite runs on a server and provides constant scanning for target web apps ?
+  ### Which edition of Burp Suite runs on a server and provides constant scanning for target web apps ?
 Answer : Burp Suite Enterprise  
 
-  Burp Suite is frequently used when attacking web applications and ______ applications.
+  ### Burp Suite is frequently used when attacking web applications and ______ applications.
 
 Answer : Mobile  
 
