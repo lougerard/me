@@ -36,14 +36,14 @@ No Answer
 
 ## TASK 2 : What is Burp Suite ? <a name="What"></a>
 
-  ### Which edition of Burp Suite will we be using in this module ?
+### Which edition of Burp Suite will we be using in this module ?
     
 Answer : Burp Suite Community  
 
-  ### Which edition of Burp Suite runs on a server and provides constant scanning for target web apps ?
+### Which edition of Burp Suite runs on a server and provides constant scanning for target web apps ?
 Answer : Burp Suite Enterprise  
 
-  ### Burp Suite is frequently used when attacking web applications and ______ applications.
+### Burp Suite is frequently used when attacking web applications and ___ applications.
 
 Answer : Mobile  
 
