@@ -2,7 +2,7 @@
 title: Burp Suite - The Basics
 author: CYB3RM3
 name: CYB3RM3 | Burp Suite - The Basics 
-date: 2021-09-18 14:48:50
+date: 2021-09-18 14:48:50 +0100
 categories: [TryHackMe, Web]
 tags: [Web, BurpSuite]
 ---

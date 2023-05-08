@@ -1,7 +1,8 @@
 ---
 title:  Hackernote
 name: CYB3RM3 | Hackernote
-date:   2021-09-05 13:46:58
+author: CYB3RM3
+date: 2021-09-05 13:46:58 +0100
 categories: [TryHackMe, Web]
 tags: [Web]
 ---
@@ -9,7 +10,7 @@ A custom webapp, introducing username enumeration, custom wordlists and a basic 
 
 THM Room [https://tryhackme.com/room/hackernote](https://tryhackme.com/room/hackernote)
 
-## TASK 1 : Reconnaissance <a name="Reconnaissance"></a>
+## TASK 1 : Reconnaissance
 
 ### Which ports are open? (in numerical order)
 
@@ -60,7 +61,7 @@ root@ip-10-10-127-246:~# nmap -sV -sC -vv 10.10.127.143
 
 Answer : go
 
-## TASK 2 : Investigate <a name="Investigate"></a>
+## TASK 2 : Investigate 
 
 ### Create your own user account
 No answer : created user john and password 12345 with hint 12345
@@ -77,7 +78,7 @@ No answer. Delay before error
 ### Notice the timing difference. This allows user enumeration
 No answer. Wrong username is returning "invalid username or password" immediately and clicking "i forgot my password" with a valid username show the hint for this usernme.
 
-## TASK 3 : Exploit <a name="Exploit"></a>
+## TASK 3 : Exploit
 
 ### Try to write a script to perform a timing attack.
 No answer. Download script from [https://raw.githubusercontent.com/NinjaJc01/hackerNoteExploits/master/exploit.py](https://raw.githubusercontent.com/NinjaJc01/hackerNoteExploits/master/exploit.py)
@@ -92,7 +93,7 @@ Answer : 1
 
 Answer : james
 
-## TASK 4 : Attack Passwords <a name="AttackPasswords"></a>
+## TASK 4 : Attack Passwords
 
 ### Form the hydra command to attack the login API route
     
@@ -141,7 +142,7 @@ thm{56911bd7ba1371a3221478aa5c094d68}
 
 Answer :thm{56911bd7ba1371a3221478aa5c094d68}
 
-## TASK 5 : Escalate <a name="Escalate"></a>
+## TASK 5 : Escalate
 
 ### What is the CVE number for the exploit? 
 Reading the texttell us the recent CVE is "pwdfeedback" and googling"pwdfeedback" return theCVE-2019-18634.  
