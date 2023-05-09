@@ -20,7 +20,7 @@ timezone: Europe/Paris
 
 title: CYB3RM3 # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the sub-title
+tagline: Welcome to my personnal website (Rework in progress) # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -73,10 +73,10 @@ theme_mode: # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: "https://chirpy-img.netlify.app"
+img_cdn: #"https://chirpy-img.netlify.app"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/commons/avatar.jpg"
+avatar: "/images/profile.jpg"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
