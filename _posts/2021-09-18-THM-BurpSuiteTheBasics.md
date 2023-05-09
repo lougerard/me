@@ -103,7 +103,7 @@ Answer : ctrl+f
 
 ### Read through the options in the right-click menu. There is one particularly useful option that allows you to intercept and modify the response to your request. What is this option ? Intercept a request with burp then go to proxy intercept and take a look in the right-click menu !
 
-![](../web/image/458-e589f08c/2021-09-18%2011_36_03-TryHackMe%20_%20Burp%20Suite_%20The%20Basics.png)  
+<!-- ![](../web/image/458-e589f08c/2021-09-18%2011_36_03-TryHackMe%20_%20Burp%20Suite_%20The%20Basics.png)   -->
 
 Answer : Response to this request  
 
