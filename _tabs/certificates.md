@@ -1,5 +1,5 @@
 ---
-# the default layout is 'page'
+layout: certificates
 icon: fas fa-certificate
 order: 6
 ---
