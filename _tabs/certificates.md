@@ -4,5 +4,5 @@ icon: fas fa-certificate
 order: 6
 ---
 
-> Rework in progress, will be available soon !
-{: .prompt-tip }
+<!-- > Rework in progress, will be available soon !
+{: .prompt-tip } -->
