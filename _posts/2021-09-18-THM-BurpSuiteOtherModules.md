@@ -93,14 +93,18 @@ No Answer.
 No Answer.
 
 ### In the Repeater tab, change the credentials to (see below) and send the request again, then pass the new response into Comparer.
-        Username: support_admin
-        Password: w58ySK4W
+
+```text
+Username: support_admin
+Password: w58ySK4W
+```
+{: .nolineno }
 
 No Answer
 
 ### Compare the two responses  by word. How many differences does Comparer detect in total ?
 
-![Comparer](/images/thm/burpModules/Burp Suite_modolues_1.png)
+![Comparer](/images/thm/burpModules/Burp Suite_ modules_1.png)
 _Comparer_
 
 Answer : 9
@@ -112,10 +116,10 @@ No Answer.
 ## TASK 8 : Sequencer - Live Capture
 ### Follow the steps above to perform entropy analysis on the loginToken set by the /admin/login route of our target web app.
 
-![Sequencer](/images/thm/burpModules/Burp Suite_modolues_2.png)
+![Sequencer](/images/thm/burpModules/Burp Suite_ modules_2.png)
 _Sequencer_
 
-![Entropy](/images/thm/burpModules/Burp Suite_modolues_3.png)
+![Entropy](/images/thm/burpModules/Burp Suite_ modules_3.png)
 _Entropy_
 
 No Answer
