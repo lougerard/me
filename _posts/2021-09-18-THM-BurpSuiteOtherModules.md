@@ -47,10 +47,8 @@ Answer : 24034214a720270024142d541357471232250253552c1162d1206c
 ## TASK 4 : Decoder - Hashing
 ### Using Decoder, what is the SHA-256 hashsum of the phrase: Let's get Hashing! ? Convert this into an ASCII Hex string for the answer to this question.
 
-```text
-Let's get Hashing! > kr5qõ¯V0KYlµut7âyP r#¾ > 6b72350e719a8ef5af560830164b13596cb582757437e21d1879502072238abe
-```
-{: .nolineno }
+![Hashing](/images/thm/burpModules/Burp Suite_ modules_4.png)
+_Hashing_
 
 Answer : 6b72350e719a8ef5af560830164b13596cb582757437e21d1879502072238abe
 
@@ -65,17 +63,9 @@ Answer : TcV4QGZZN7y7lwYFRMMoeA==
 "Some joker has messed with my SSH key! There are four keys in the directory, and I have no idea which is the real one. The MD5 hashsum for my key is 3166226048d6ad776370dc105d40d9f8 -- could you find it for me?"
 Submit the correct key name as your answer.
 
-```text
-MD5(Key1) =  µ#ç¥´è*%O&iäj|*
-ASCII_hex(µ#ç¥´è*%O&iäj|*) = b523e7a5b4e82a254f2669e46a7c012a
+![keys](/images/thm/burpModules/Burp Suite_ modules_5.png)
+_keys_
 
-MD5(Key2) =  _´Ç<Á¬ÃPúåöeU
-ASCII_hex(_´Ç<Á¬ÃPúåöeU) = 915fb4c73cc1acc350fae502f6655500
-
-MD5(Key3) =  1f"`HÖ­wcpÜ]@Ùø
-ASCII_hex(1f"`HÖ­wcpÜ]@Ùø) = 3166226048d6ad776370dc105d40d9f8
-```
-{: .nolineno }
 Answer : key3
 
 ## TASK 5 : Comparer - Overview
