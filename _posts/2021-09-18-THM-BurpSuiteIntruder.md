@@ -7,7 +7,6 @@ categories: [TryHackMe, Web]
 tags: [Web, BurpSuite]
 ---
 
-Learn how to use Repeater to duplicate requests in Burp Suite
 THM Room [https://tryhackme.com/room/burpsuiteintruder](https://tryhackme.com/room/burpsuiteintruder)
 
 
