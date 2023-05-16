@@ -53,10 +53,10 @@ _Hashing_
 Answer : 6b72350e719a8ef5af560830164b13596cb582757437e21d1879502072238abe
 
 ### Generate an MD4 hashsum of the phrase: Insecure Algorithms. Encode this as base64 (not ASCII Hex) before submitting.
-```text
-Insecure Algorithms  >  MÅx@fY7¼»DÃ(x  >  TcV4QGZZN7y7lwYFRMMoeA==
-```
-{: .nolineno }
+
+![hashsum](/images/thm/burpModules/Burp Suite_ modules_6.png)
+_hashsum_
+
 Answer : TcV4QGZZN7y7lwYFRMMoeA==
 
 ### Now read the problem specification below:
