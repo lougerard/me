@@ -7,7 +7,7 @@ categories: [TryHackMe, Web]
 tags: [Web, BurpSuite]
 ---
 
-THM Room [ttps://tryhackme.com/room/burpsuiteom](ttps://tryhackme.com/room/burpsuiteom)
+THM Room [https://tryhackme.com/room/burpsuiteom](https://tryhackme.com/room/burpsuiteom)
 
 ## TASK 1 : Introduction - Outline
 ### Deploy the machine attached to this task !
