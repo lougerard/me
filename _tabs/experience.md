@@ -7,13 +7,14 @@ order: 2
 February, 2023 - present
 
 I protect our clients with the TEHTRIS XDR platform and TEHTRIS modules. 
-I Analyse threats and security news related to Assyst Europe clients infrastructe and services.
-I build and implement Red Team scenarios to showcase the cybersecurity risks.
+I analyse threats and security news and advisories related to Assyst Europe clients infrastructe and services.
+I build and implement Red Team scenarios to showcase cybersecurity risks. 
+Some of those scenarios where shown on our stand at the CyberSec Europe 2023 at Brussels.
 
 ### ICT Integrator - Assyst Europe, BE
 July 1, 2019 - January, 2023
 
-Working as ICT Integrator at Assyst Europe in a team, managing networks infrastructure of clients like Law Firms, European Representation in Brussel and PME's. Member of the security team of Assyst Europe, we manage security advisories and incidents like data breaches.
+I worked as ICT Integrator at Assyst Europe in a team, managing networks infrastructure of clients like Law Firms, European Representation in Brussel and PME's. Member of the security team of Assyst Europe, our team manage security advisories and incidents like data breaches.
 
 ### Student - CHU-UCL Mont-Godinne, BE 
 February 11, 2019 - May 17, 2019
@@ -23,7 +24,7 @@ Internship at the University Hospital CHU-UCL Mont-Godinne. Development and desi
 ### Student - EPHEC, BE
 February 4, 2019 – February 9, 2019
 
-Configuration of an enterprise network as part of a course at EPHEC (Network diagrams, cabling, routing, AD, DNS and DHCP services)
+Configuration of an enterprise network as part of a course at EPHEC (Network diagrams, patching, routing, AD, DNS and DHCP services)
 
 ### Student - Cardiff University, UK
 April 9, 2018 - April 13, 2018
