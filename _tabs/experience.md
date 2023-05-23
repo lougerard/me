@@ -7,9 +7,9 @@ order: 2
 February, 2023 - present
 
 I protect our clients with the TEHTRIS XDR platform and TEHTRIS modules. 
-I analyse threats and security news and advisories related to Assyst Europe clients infrastructe and services.
+I analyse threats and security news and advisories related to Assyst Europe client's infrastructure and services.
 I build and implement Red Team scenarios to showcase cybersecurity risks. 
-Some of those scenarios where shown on our stand at the CyberSec Europe 2023 at Brussels.
+Some of these scenarios where shown on our stand during the CyberSec Europe 2023 event in Brussels.
 
 ### ICT Integrator - Assyst Europe, BE
 July 1, 2019 - January, 2023
