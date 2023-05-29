@@ -7,6 +7,8 @@ categories: [TryHackMe, Web]
 tags: [Web, LFI]
 ---
 
+This room introduces file inclusion vulnerabilities, including Local File Inclusion (LFI), Remote File Inclusion (RFI), and directory traversal.
+
 THM Room [https://tryhackme.com/room/fileinc](https://tryhackme.com/room/fileinc)
 
 
