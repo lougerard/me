@@ -4,7 +4,7 @@ author: CYB3RM3
 name: CYB3RM3 | RedLine
 date: 2022-01-24 11:25:00 +0100
 categories: [TryHackMe, Forensics]
-tags: [Forensics, Investigation, Memory analysis]
+tags: [Forensics, Investigation, Memory analysis, Redline]
 ---
 
 Learn how to use Redline to perform memory analysis and to scan for IOCs on an endpoint. 
@@ -183,10 +183,74 @@ _Virustotal_
 Answer : 57492d33b7c0755bb411b22d2dfdfdf088cbbfcd010e30dd8d425d5fe66adff4
 
 ### The attacker managed to masquerade the real filename. Can you find it having the hash in your arsenal? 
-
 Checinkg the others informations on Virustotal gives you the answer :
 
+![psexec.exe](/images/thm/btredlinejoxr3d/btredlinejoxr3d_20.png)
+_psexec.exe_
 
 Answer : psexec.exe
+
 ## TASK 7 : Endpoint Investigation
+### Can you identify the product name of the machine?
+Product name will be in the "system information" tab :
+
+![System Information](/images/thm/btredlinejoxr3d/btredlinejoxr3d_21.png)
+_System Information_
+
+Answer : Windows 7 Home Basic
+
+### Can you find the name of the note left on the Desktop for the "Charles"?
+
+I searched through "file system" then "users\charles\desktop" :
+
+![Note filename](/images/thm/btredlinejoxr3d/btredlinejoxr3d_22.png)
+_Note filename_
+
+Answer : _R_E_A_D__T_H_I_S__AJYG1O_.txt
+
+### Find the Windows Defender service; what is the name of its service DLL?
+
+Gone to "Windows services" then searched for "windef" name :
+
+![Windows Defender service](/images/thm/btredlinejoxr3d/btredlinejoxr3d_23.png)
+_Windows Defender service_
+
+Then double clicked on the "Windefend" service to view the properties :
+
+![Windefend](/images/thm/btredlinejoxr3d/btredlinejoxr3d_24.png)
+_Windefend_
+
+Answer : MpSvc.dll
+
+### The user manually downloaded a zip file from the web. Can you find the filename?
+
+Looked into file system > download for Charles :
+
+![Zip downloaded](/images/thm/btredlinejoxr3d/btredlinejoxr3d_25.png)
+_Zip downloaded_
+
+Answer : eb5489216d4361f9e3650e6a6332f7ee21b0bc9f3f3a4018c69733949be1d481.zip
+
+### Provide the filename of the malicious executable that got dropped on the user's Desktop.
+
+![Malicious executable](/images/thm/btredlinejoxr3d/btredlinejoxr3d_26.png)
+_Malicious executable_
+
+Answer : Endermanch@Cerber5.exe
+
+### Provide the MD5 hash for the dropped malicious executable.
+Double clicked on this item :
+
+![Malicious executable hash](/images/thm/btredlinejoxr3d/btredlinejoxr3d_27.png)
+_Malicious executable hash_
+
+Answer : fe1bc60a95b2c2d77cd5d232296a7fa4
+
+### What is the name of the ransomware?
+Name of the .exe file !
+
+Answer : Cerber
+
 ## TASK 8 : Conclusion 
+### Read the above. 
+No Answer.
