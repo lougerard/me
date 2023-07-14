@@ -6,8 +6,8 @@ order: 2
 ### SOC Analyst & Offensive Security Engineer - Assyst Europe, BE
 February, 2023 - present
 
-I protect our clients with the TEHTRIS XDR platform and TEHTRIS modules. 
-I analyse threats and security news and advisories related to Assyst Europe client's infrastructure and services.
+I'm a SOC Analyst on the TEHTRIS XDR platform.
+I also analyse threats and security news and advisories related to Assyst Europe client's infrastructure and services.
 I build and implement Red Team scenarios to showcase cybersecurity risks. 
 Some of these scenarios where shown on our stand during the CyberSec Europe 2023 event in Brussels.
 
