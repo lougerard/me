@@ -1,0 +1,2607 @@
+  Template[0]:
+  TemplatePropCommonName = Administrator
+  TemplatePropFriendlyName = Administrator
+  TemplatePropEKUs =
+4 ObjectIds:
+    1.3.6.1.4.1.311.10.3.1 Microsoft Trust List Signing
+    1.3.6.1.4.1.311.10.3.4 Encrypting File System
+    1.3.6.1.5.5.7.3.4 Secure Email
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 4
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.7
+
+  TemplatePropEnrollmentFlags = 29 (41)
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = a6000000 (-1509949440)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_EMAIL -- 4000000 (67108864)
+    CT_FLAG_SUBJECT_REQUIRE_EMAIL -- 20000000 (536870912)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 1023a (66106)
+    CT_FLAG_ADD_EMAIL -- 2
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 1c
+    Certificate Template Name (Certificate Type)
+        Administrator
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 2e
+    Enhanced Key Usage
+        Microsoft Trust List Signing (1.3.6.1.4.1.311.10.3.1)
+        Encrypting File System (1.3.6.1.4.1.311.10.3.4)
+        Secure Email (1.3.6.1.5.5.7.3.4)
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[1]:
+  TemplatePropCommonName = ClientAuth
+  TemplatePropFriendlyName = Authenticated Session
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+    2: Microsoft Base DSS Cryptographic Provider
+
+  TemplatePropMajorRevision = 3
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.4
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 82000000 (-2113929216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10220 (66080)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DU)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Users
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 16
+    Certificate Template Name (Certificate Type)
+        ClientAuth
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[2]:
+  TemplatePropCommonName = EFS
+  TemplatePropFriendlyName = Basic EFS
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.10.3.4 Encrypting File System
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 3
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.6
+
+  TemplatePropEnrollmentFlags = 29 (41)
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 82000000 (-2113929216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10238 (66104)
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DU)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Users
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 8
+    Certificate Template Name (Certificate Type)
+        EFS
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = e
+    Enhanced Key Usage
+        Encrypting File System (1.3.6.1.4.1.311.10.3.4)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Key Encipherment (20)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[3]:
+  TemplatePropCommonName = CAExchange
+  TemplatePropFriendlyName = CA Exchange
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.21.5 Private Key Archival
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 6a (106)
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.26 CA Exchange
+
+  TemplatePropV1ApplicationPolicy =
+1 ObjectIds:
+    1.3.6.1.4.1.311.21.5 Private Key Archival
+
+  TemplatePropEnrollmentFlags = 1
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10040 (65600)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=CA Exchange(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.26)
+        Major Version Number=106
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = d
+    Enhanced Key Usage
+        Private Key Archival (1.3.6.1.4.1.311.21.5)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Key Encipherment (20)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = f
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Private Key Archival
+
+  TemplatePropValidityPeriod = 1 Weeks
+  TemplatePropRenewalPeriod = 1 Days
+
+  Template[4]:
+  TemplatePropCommonName = CEPEncryption
+  TemplatePropFriendlyName = CEP Encryption
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.20.2.1 Certificate Request Agent
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 4
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.22
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10241 (66113)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 1c
+    Certificate Template Name (Certificate Type)
+        CEPEncryption
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = e
+    Enhanced Key Usage
+        Certificate Request Agent (1.3.6.1.4.1.311.20.2.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Key Encipherment (20)
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[5]:
+  TemplatePropCommonName = CodeSigning
+  TemplatePropFriendlyName = Code Signing
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.3 Code Signing
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+    2: Microsoft Base DSS Cryptographic Provider
+
+  TemplatePropMajorRevision = 3
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.9
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 82000000 (-2113929216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10220 (66080)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 18
+    Certificate Template Name (Certificate Type)
+        CodeSigning
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        Code Signing (1.3.6.1.5.5.7.3.3)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[6]:
+  TemplatePropCommonName = Machine
+  TemplatePropFriendlyName = Computer
+  TemplatePropEKUs =
+2 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.1 Server Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 5
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.14
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 18000000 (402653184)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+    CT_FLAG_SUBJECT_REQUIRE_DNS_AS_CN -- 10000000 (268435456)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10260 (66144)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DC)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Computers
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 10
+    Certificate Template Name (Certificate Type)
+        Machine
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 16
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+        Server Authentication (1.3.6.1.5.5.7.3.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[7]:
+  TemplatePropCommonName = CrossCA
+  TemplatePropFriendlyName = Cross Certification Authority
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 69 (105)
+  TemplatePropDescription = Cross-certified certification authority
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 1
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.25 Cross Certification Authority
+
+  TemplatePropRAEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.10.3.10 Qualified Subordination
+
+  TemplatePropEnrollmentFlags = 8
+    CT_FLAG_PUBLISH_TO_DS -- 8
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10810 (67600)
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_IS_CROSS_CA -- 800 (2048)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=Cross Certification Authority(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.25)
+        Major Version Number=105
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Certificate Signing, Off-line CRL Signing, CRL Signing (86)
+
+  Extension[2]:
+    2.5.29.19: Flags = 1(Critical), Length = 5
+    Basic Constraints
+        Subject Type=CA
+        Path Length Constraint=None
+
+  TemplatePropValidityPeriod = 5 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[8]:
+  TemplatePropCommonName = DirectoryEmailReplication
+  TemplatePropFriendlyName = Directory Email Replication
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.21.19 Directory Service Email Replication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 73 (115)
+  TemplatePropDescription = Directory e-mail replication
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.29 Directory Email Replication
+
+  TemplatePropSupersede =
+    0: DomainController
+
+  TemplatePropV1ApplicationPolicy =
+1 ObjectIds:
+    1.3.6.1.4.1.311.21.19 Directory Service Email Replication
+
+  TemplatePropEnrollmentFlags = 29 (41)
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 9000000 (150994944)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DIRECTORY_GUID -- 1000000 (16777216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10060 (65632)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-498)(OA;;RPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;S-1-5-21-3330634377-1326264276-632209373-498)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DD)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(OA;;RPWPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;DD)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;ED)(OA;;RPWPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;ED)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Enterprise Read-only Domain Controllers
+    Allow Auto-Enroll	LUNAR\Enterprise Read-only Domain Controllers
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Controllers
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Auto-Enroll	LUNAR\Domain Controllers
+    Allow Enroll	NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS
+    Allow Auto-Enroll	NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=Directory Email Replication(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.29)
+        Major Version Number=115
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = d
+    Enhanced Key Usage
+        Directory Service Email Replication (1.3.6.1.4.1.311.21.19)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = f
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Directory Service Email Replication
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[9]:
+  TemplatePropCommonName = DomainController
+  TemplatePropFriendlyName = Domain Controller
+  TemplatePropEKUs =
+2 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.1 Server Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 4
+  TemplatePropDescription = Directory e-mail replication
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.15
+
+  TemplatePropEnrollmentFlags = 29 (41)
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 19000000 (419430400)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DIRECTORY_GUID -- 1000000 (16777216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+    CT_FLAG_SUBJECT_REQUIRE_DNS_AS_CN -- 10000000 (268435456)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 1026c (66156)
+    CT_FLAG_ADD_OBJ_GUID -- 4
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-498)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DD)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;ED)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Enterprise Read-only Domain Controllers
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Controllers
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Enroll	NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 22
+    Certificate Template Name (Certificate Type)
+        DomainController
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 16
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+        Server Authentication (1.3.6.1.5.5.7.3.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[10]:
+  TemplatePropCommonName = DomainControllerAuthentication
+  TemplatePropFriendlyName = Domain Controller Authentication
+  TemplatePropEKUs =
+3 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.1 Server Authentication
+    1.3.6.1.4.1.311.20.2.2 Smart Card Logon
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 6e (110)
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.28 Domain Controller Authentication
+
+  TemplatePropSupersede =
+    0: DomainController
+
+  TemplatePropV1ApplicationPolicy =
+3 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.1 Server Authentication
+    1.3.6.1.4.1.311.20.2.2 Smart Card Logon
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 8000000 (134217728)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10060 (65632)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-498)(OA;;RPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;S-1-5-21-3330634377-1326264276-632209373-498)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DD)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(OA;;RPWPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;DD)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;ED)(OA;;RPWPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;ED)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Enterprise Read-only Domain Controllers
+    Allow Auto-Enroll	LUNAR\Enterprise Read-only Domain Controllers
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Controllers
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Auto-Enroll	LUNAR\Domain Controllers
+    Allow Enroll	NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS
+    Allow Auto-Enroll	NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=Domain Controller Authentication(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.28)
+        Major Version Number=110
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 22
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+        Server Authentication (1.3.6.1.5.5.7.3.1)
+        Smart Card Logon (1.3.6.1.4.1.311.20.2.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = 28
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Client Authentication
+        [2]Application Certificate Policy:
+             Policy Identifier=Server Authentication
+        [3]Application Certificate Policy:
+             Policy Identifier=Smart Card Logon
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[11]:
+  TemplatePropCommonName = EFSRecovery
+  TemplatePropFriendlyName = EFS Recovery Agent
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.10.3.4.1 File Recovery
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 6
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.8
+
+  TemplatePropEnrollmentFlags = 21 (33)
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 82000000 (-2113929216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10230 (66096)
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 18
+    Certificate Template Name (Certificate Type)
+        EFSRecovery
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = f
+    Enhanced Key Usage
+        File Recovery (1.3.6.1.4.1.311.10.3.4.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Key Encipherment (20)
+
+  TemplatePropValidityPeriod = 5 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[12]:
+  TemplatePropCommonName = EnrollmentAgent
+  TemplatePropFriendlyName = Enrollment Agent
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.20.2.1 Certificate Request Agent
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+    2: Microsoft Base DSS Cryptographic Provider
+
+  TemplatePropMajorRevision = 4
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.11
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 82000000 (-2113929216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10220 (66080)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 20
+    Certificate Template Name (Certificate Type)
+        EnrollmentAgent
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = e
+    Enhanced Key Usage
+        Certificate Request Agent (1.3.6.1.4.1.311.20.2.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[13]:
+  TemplatePropCommonName = MachineEnrollmentAgent
+  TemplatePropFriendlyName = Enrollment Agent (Computer)
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.20.2.1 Certificate Request Agent
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+    2: Microsoft Base DSS Cryptographic Provider
+
+  TemplatePropMajorRevision = 5
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.13
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 18000000 (402653184)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+    CT_FLAG_SUBJECT_REQUIRE_DNS_AS_CN -- 10000000 (268435456)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10260 (66144)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 2e
+    Certificate Template Name (Certificate Type)
+        MachineEnrollmentAgent
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = e
+    Enhanced Key Usage
+        Certificate Request Agent (1.3.6.1.4.1.311.20.2.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[14]:
+  TemplatePropCommonName = EnrollmentAgentOffline
+  TemplatePropFriendlyName = Exchange Enrollment Agent (Offline request)
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.20.2.1 Certificate Request Agent
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+    2: Microsoft Base DSS Cryptographic Provider
+
+  TemplatePropMajorRevision = 4
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.12
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10201 (66049)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 2e
+    Certificate Template Name (Certificate Type)
+        EnrollmentAgentOffline
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = e
+    Enhanced Key Usage
+        Certificate Request Agent (1.3.6.1.4.1.311.20.2.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[15]:
+  TemplatePropCommonName = ExchangeUserSignature
+  TemplatePropFriendlyName = Exchange Signature Only
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.4 Secure Email
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+    2: Microsoft Base DSS Cryptographic Provider
+
+  TemplatePropMajorRevision = 6
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.24
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10201 (66049)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 2c
+    Certificate Template Name (Certificate Type)
+        ExchangeUserSignature
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        Secure Email (1.3.6.1.5.5.7.3.4)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[16]:
+  TemplatePropCommonName = ExchangeUser
+  TemplatePropFriendlyName = Exchange User
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.4 Secure Email
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 7
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.23
+
+  TemplatePropEnrollmentFlags = 1
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10211 (66065)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 1a
+    Certificate Template Name (Certificate Type)
+        ExchangeUser
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        Secure Email (1.3.6.1.5.5.7.3.4)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Key Encipherment (20)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[17]:
+  TemplatePropCommonName = HTTPSWebServer
+  TemplatePropFriendlyName = HTTPS Web Server
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+    1: Microsoft DH SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 64 (100)
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = d (13)
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.8824417.6496437 HTTPS Web Server
+
+  TemplatePropV1ApplicationPolicy =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropEnrollmentFlags = 8
+    CT_FLAG_PUBLISH_TO_DS -- 8
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 5050010 (84213776)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_WINBLUE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 50000 (327680)
+    TEMPLATE_CLIENT_VER_WINBLUE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 5000000 (83886080)
+
+  TemplatePropGeneralFlags = 20241 (131649)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_MODIFIED -- 20000 (131072)
+
+  TemplatePropSecurityDescriptor = O:LAG:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(OA;;CR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;AU)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;LA)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Enroll	NT AUTHORITY\Authenticated Users
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Administrator
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 31
+    Certificate Template Information
+        Template=HTTPS Web Server(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.8824417.6496437)
+        Major Version Number=100
+        Minor Version Number=13
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = e
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Client Authentication
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[18]:
+  TemplatePropCommonName = IPSECIntermediateOnline
+  TemplatePropFriendlyName = IPSec
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.8.2.2 IP security IKE intermediate
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 8
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.19
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 18000000 (402653184)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+    CT_FLAG_SUBJECT_REQUIRE_DNS_AS_CN -- 10000000 (268435456)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10260 (66144)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DC)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DD)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Computers
+    Allow Enroll	LUNAR\Domain Controllers
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 30
+    Certificate Template Name (Certificate Type)
+        IPSECIntermediateOnline
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        IP security IKE intermediate (1.3.6.1.5.5.8.2.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[19]:
+  TemplatePropCommonName = IPSECIntermediateOffline
+  TemplatePropFriendlyName = IPSec (Offline request)
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.8.2.2 IP security IKE intermediate
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 7
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.20
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10241 (66113)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 32
+    Certificate Template Name (Certificate Type)
+        IPSECIntermediateOffline
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        IP security IKE intermediate (1.3.6.1.5.5.8.2.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[20]:
+  TemplatePropCommonName = KerberosAuthentication
+  TemplatePropFriendlyName = Kerberos Authentication
+  TemplatePropEKUs =
+4 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.1 Server Authentication
+    1.3.6.1.4.1.311.20.2.2 Smart Card Logon
+    1.3.6.1.5.2.3.5 KDC Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 6e (110)
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.33 Kerberos Authentication
+
+  TemplatePropV1ApplicationPolicy =
+4 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.1 Server Authentication
+    1.3.6.1.4.1.311.20.2.2 Smart Card Logon
+    1.3.6.1.5.2.3.5 KDC Authentication
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 8400000 (138412032)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DOMAIN_DNS -- 400000 (4194304)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10060 (65632)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-498)(OA;;RPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;S-1-5-21-3330634377-1326264276-632209373-498)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DD)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(OA;;RPWPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;DD)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;ED)(OA;;RPWPCR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;ED)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Enterprise Read-only Domain Controllers
+    Allow Auto-Enroll	LUNAR\Enterprise Read-only Domain Controllers
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Controllers
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Auto-Enroll	LUNAR\Domain Controllers
+    Allow Enroll	NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS
+    Allow Auto-Enroll	NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=Kerberos Authentication(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.33)
+        Major Version Number=110
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 2b
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+        Server Authentication (1.3.6.1.5.5.7.3.1)
+        Smart Card Logon (1.3.6.1.4.1.311.20.2.2)
+        KDC Authentication (1.3.6.1.5.2.3.5)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = 33
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Client Authentication
+        [2]Application Certificate Policy:
+             Policy Identifier=Server Authentication
+        [3]Application Certificate Policy:
+             Policy Identifier=Smart Card Logon
+        [4]Application Certificate Policy:
+             Policy Identifier=KDC Authentication
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[21]:
+  TemplatePropCommonName = KeyRecoveryAgent
+  TemplatePropFriendlyName = Key Recovery Agent
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.21.6 Key Recovery Agent
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 69 (105)
+  TemplatePropDescription = Key recovery agent
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.27 Key Recovery Agent
+
+  TemplatePropV1ApplicationPolicy =
+1 ObjectIds:
+    1.3.6.1.4.1.311.21.6 Key Recovery Agent
+
+  TemplatePropEnrollmentFlags = 27 (39)
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_PEND_ALL_REQUESTS -- 2
+    CT_FLAG_PUBLISH_TO_KRA_CONTAINER -- 4
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 82000000 (-2113929216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10020 (65568)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=Key Recovery Agent(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.27)
+        Major Version Number=105
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = d
+    Enhanced Key Usage
+        Key Recovery Agent (1.3.6.1.4.1.311.21.6)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Key Encipherment (20)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = f
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Key Recovery Agent
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[22]:
+  TemplatePropCommonName = OCSPResponseSigning
+  TemplatePropFriendlyName = OCSP Response Signing
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.9 OCSP Signing
+
+  TemplatePropMajorRevision = 65 (101)
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 3
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.32 OCSP Response Signing
+
+  TemplatePropV1ApplicationPolicy =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.9 OCSP Signing
+
+  TemplatePropAsymmetricAlgorithm = RSA
+  TemplatePropKeySecurityDescriptor = D:P(A;;FA;;;BA)(A;;FA;;;SY)(A;;GR;;;S-1-5-80-3804348527-3718992918-2141599610-3686422417-2726379419)
+
+    Allow Write	BUILTIN\Administrators
+    Allow Write	NT AUTHORITY\SYSTEM
+    Allow Read	S-1-5-80-3804348527-3718992918-2141599610-3686422417-2726379419
+
+
+  TemplatePropHashAlgorithm = SHA1
+  TemplatePropKeyUsage = 2
+  TemplatePropEnrollmentFlags = 5000 (20480)
+    CT_FLAG_ADD_OCSP_NOCHECK -- 1000 (4096)
+    CT_FLAG_NOREVOCATIONINFOINISSUEDCERTS -- 4000 (16384)
+
+  TemplatePropSubjectNameFlags = 18000000 (402653184)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+    CT_FLAG_SUBJECT_REQUIRE_DNS_AS_CN -- 10000000 (268435456)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10240 (66112)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+5 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=OCSP Response Signing(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.32)
+        Major Version Number=101
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        OCSP Signing (1.3.6.1.5.5.7.3.9)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = e
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=OCSP Signing
+
+  Extension[4]:
+    1.3.6.1.5.5.7.48.1.5: Flags = 0, Length = 2
+    OCSP No Revocation Checking
+
+    0000  05 00                                              ..
+0000: 05 00					; NULL (0 Bytes)
+
+  TemplatePropValidityPeriod = 2 Weeks
+  TemplatePropRenewalPeriod = 2 Days
+
+  Template[23]:
+  TemplatePropCommonName = RASAndIASServer
+  TemplatePropFriendlyName = RAS and IAS Server
+  TemplatePropEKUs =
+2 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.1 Server Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 65 (101)
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.31 RAS and IAS Server
+
+  TemplatePropV1ApplicationPolicy =
+2 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.1 Server Authentication
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 48000000 (1207959552)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+    CT_FLAG_SUBJECT_REQUIRE_COMMON_NAME -- 40000000 (1073741824)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10260 (66144)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;RS)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Enroll	LUNAR\RAS and IAS Servers
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=RAS and IAS Server(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.31)
+        Major Version Number=101
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 16
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+        Server Authentication (1.3.6.1.5.5.7.3.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = 1a
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Client Authentication
+        [2]Application Certificate Policy:
+             Policy Identifier=Server Authentication
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[24]:
+  TemplatePropCommonName = CA
+  TemplatePropFriendlyName = Root Certification Authority
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 5
+  TemplatePropDescription = Certification authority (CA)
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.17
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 100d1 (65745)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_IS_CA -- 80 (128)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 6
+    Certificate Template Name (Certificate Type)
+        CA
+
+  Extension[1]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Certificate Signing, Off-line CRL Signing, CRL Signing (86)
+
+  Extension[2]:
+    2.5.29.19: Flags = 1(Critical), Length = 5
+    Basic Constraints
+        Subject Type=CA
+        Path Length Constraint=None
+
+  TemplatePropValidityPeriod = 5 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[25]:
+  TemplatePropCommonName = OfflineRouter
+  TemplatePropFriendlyName = Router (Offline request)
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 4
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.21
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10241 (66113)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 1c
+    Certificate Template Name (Certificate Type)
+        OfflineRouter
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[26]:
+  TemplatePropCommonName = SmartcardLogon
+  TemplatePropFriendlyName = Smartcard Logon
+  TemplatePropEKUs =
+2 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.4.1.311.20.2.2 Smart Card Logon
+
+  TemplatePropMajorRevision = 6
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.5
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 82000000 (-2113929216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10200 (66048)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 1e
+    Certificate Template Name (Certificate Type)
+        SmartcardLogon
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 18
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+        Smart Card Logon (1.3.6.1.4.1.311.20.2.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[27]:
+  TemplatePropCommonName = SmartcardUser
+  TemplatePropFriendlyName = Smartcard User
+  TemplatePropEKUs =
+3 ObjectIds:
+    1.3.6.1.5.5.7.3.4 Secure Email
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.4.1.311.20.2.2 Smart Card Logon
+
+  TemplatePropMajorRevision = b (11)
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.3
+
+  TemplatePropEnrollmentFlags = 9
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_PUBLISH_TO_DS -- 8
+
+  TemplatePropSubjectNameFlags = a6000000 (-1509949440)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_EMAIL -- 4000000 (67108864)
+    CT_FLAG_SUBJECT_REQUIRE_EMAIL -- 20000000 (536870912)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 1020a (66058)
+    CT_FLAG_ADD_EMAIL -- 2
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 1c
+    Certificate Template Name (Certificate Type)
+        SmartcardUser
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 22
+    Enhanced Key Usage
+        Secure Email (1.3.6.1.5.5.7.3.4)
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+        Smart Card Logon (1.3.6.1.4.1.311.20.2.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[28]:
+  TemplatePropCommonName = SubCA
+  TemplatePropFriendlyName = Subordinate Certification Authority
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 5
+  TemplatePropDescription = Certification authority (CA)
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.18
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 102d1 (66257)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_IS_CA -- 80 (128)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = c
+    Certificate Template Name (Certificate Type)
+        SubCA
+
+  Extension[1]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Certificate Signing, Off-line CRL Signing, CRL Signing (86)
+
+  Extension[2]:
+    2.5.29.19: Flags = 1(Critical), Length = 5
+    Basic Constraints
+        Subject Type=CA
+        Path Length Constraint=None
+
+  TemplatePropValidityPeriod = 5 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[29]:
+  TemplatePropCommonName = CTLSigning
+  TemplatePropFriendlyName = Trust List Signing
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.4.1.311.10.3.1 Microsoft Trust List Signing
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+    2: Microsoft Base DSS Cryptographic Provider
+
+  TemplatePropMajorRevision = 3
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.10
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 82000000 (-2113929216)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10220 (66080)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 16
+    Certificate Template Name (Certificate Type)
+        CTLSigning
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = e
+    Enhanced Key Usage
+        Microsoft Trust List Signing (1.3.6.1.4.1.311.10.3.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[30]:
+  TemplatePropCommonName = User
+  TemplatePropFriendlyName = User
+  TemplatePropEKUs =
+3 ObjectIds:
+    1.3.6.1.4.1.311.10.3.4 Encrypting File System
+    1.3.6.1.5.5.7.3.4 Secure Email
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 3
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.1
+
+  TemplatePropEnrollmentFlags = 29 (41)
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = a6000000 (-1509949440)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_EMAIL -- 4000000 (67108864)
+    CT_FLAG_SUBJECT_REQUIRE_EMAIL -- 20000000 (536870912)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 10 (16)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 1023a (66106)
+    CT_FLAG_ADD_EMAIL -- 2
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DU)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Users
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = a
+    Certificate Template Name (Certificate Type)
+        User
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 22
+    Enhanced Key Usage
+        Encrypting File System (1.3.6.1.4.1.311.10.3.4)
+        Secure Email (1.3.6.1.5.5.7.3.4)
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[31]:
+  TemplatePropCommonName = UserRequest
+  TemplatePropFriendlyName = User Request
+  TemplatePropEKUs =
+3 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.4 Secure Email
+    1.3.6.1.4.1.311.10.3.4 Encrypting File System
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+
+  TemplatePropMajorRevision = 64 (100)
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = a (10)
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.13950390.3651808 User Request
+
+  TemplatePropV1ApplicationPolicy =
+3 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+    1.3.6.1.5.5.7.3.4 Secure Email
+    1.3.6.1.4.1.311.10.3.4 Encrypting File System
+
+  TemplatePropEnrollmentFlags = 19 (25)
+    CT_FLAG_INCLUDE_SYMMETRIC_ALGORITHMS -- 1
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_AUTO_ENROLLMENT_CHECK_USER_DS_CERTIFICATE -- 10 (16)
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 1010010 (16842768)
+    CTPRIVATEKEY_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_2003<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 10000 (65536)
+    TEMPLATE_CLIENT_VER_XP<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 1000000 (16777216)
+
+  TemplatePropGeneralFlags = 2023a (131642)
+    CT_FLAG_ADD_EMAIL -- 2
+    CT_FLAG_PUBLISH_TO_DS -- 8
+    CT_FLAG_EXPORTABLE_KEY -- 10 (16)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_MODIFIED -- 20000 (131072)
+
+  TemplatePropSecurityDescriptor = O:LAG:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DU)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(OA;;CR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;AU)(OA;;CR;a05b8cc2-17bc-4802-a710-e7c15ab866a2;;AU)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;LA)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Users
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Enroll	NT AUTHORITY\Authenticated Users
+    Allow Auto-Enroll	NT AUTHORITY\Authenticated Users
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Administrator
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 31
+    Certificate Template Information
+        Template=User Request(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.13950390.3651808)
+        Major Version Number=100
+        Minor Version Number=10
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 22
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+        Secure Email (1.3.6.1.5.5.7.3.4)
+        Encrypting File System (1.3.6.1.4.1.311.10.3.4)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = 28
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Client Authentication
+        [2]Application Certificate Policy:
+             Policy Identifier=Secure Email
+        [3]Application Certificate Policy:
+             Policy Identifier=Encrypting File System
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[32]:
+  TemplatePropCommonName = UserSignature
+  TemplatePropFriendlyName = User Signature Only
+  TemplatePropEKUs =
+2 ObjectIds:
+    1.3.6.1.5.5.7.3.4 Secure Email
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft Enhanced Cryptographic Provider v1.0
+    1: Microsoft Base Cryptographic Provider v1.0
+    2: Microsoft Base DSS Cryptographic Provider
+
+  TemplatePropMajorRevision = 4
+  TemplatePropDescription = User
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.2
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = a6000000 (-1509949440)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_UPN -- 2000000 (33554432)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_EMAIL -- 4000000 (67108864)
+    CT_FLAG_SUBJECT_REQUIRE_EMAIL -- 20000000 (536870912)
+    CT_FLAG_SUBJECT_REQUIRE_DIRECTORY_PATH -- 80000000 (-2147483648)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10222 (66082)
+    CT_FLAG_ADD_EMAIL -- 2
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DU)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Users
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 1c
+    Certificate Template Name (Certificate Type)
+        UserSignature
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = 16
+    Enhanced Key Usage
+        Secure Email (1.3.6.1.5.5.7.3.4)
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature (80)
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[33]:
+  TemplatePropCommonName = WebServer
+  TemplatePropFriendlyName = Web Server
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.1 Server Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+    1: Microsoft DH SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 4
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 1
+  TemplatePropMinorRevision = 1
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.16
+
+  TemplatePropEnrollmentFlags = 0
+
+  TemplatePropSubjectNameFlags = 1
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10241 (66113)
+    CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+3 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.20.2: Flags = 0, Length = 14
+    Certificate Template Name (Certificate Type)
+        WebServer
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        Server Authentication (1.3.6.1.5.5.7.3.1)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  TemplatePropValidityPeriod = 2 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+
+  Template[34]:
+  TemplatePropCommonName = Workstation
+  TemplatePropFriendlyName = Workstation Authentication
+  TemplatePropEKUs =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropCryptoProviders =
+    0: Microsoft RSA SChannel Cryptographic Provider
+
+  TemplatePropMajorRevision = 65 (101)
+  TemplatePropDescription = Computer
+  TemplatePropSchemaVersion = 2
+  TemplatePropMinorRevision = 0
+  TemplatePropRASignatureCount = 0
+  TemplatePropMinimumKeySize = 800 (2048)
+  TemplatePropOID =
+    1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.30 Workstation Authentication
+
+  TemplatePropV1ApplicationPolicy =
+1 ObjectIds:
+    1.3.6.1.5.5.7.3.2 Client Authentication
+
+  TemplatePropEnrollmentFlags = 20 (32)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+
+  TemplatePropSubjectNameFlags = 8000000 (134217728)
+    CT_FLAG_SUBJECT_ALT_REQUIRE_DNS -- 8000000 (134217728)
+
+  TemplatePropPrivateKeyFlags = 0
+    CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
+    TEMPLATE_SERVER_VER_NONE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 0
+    TEMPLATE_CLIENT_VER_NONE<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 0
+
+  TemplatePropGeneralFlags = 10260 (66144)
+    CT_FLAG_AUTO_ENROLLMENT -- 20 (32)
+    CT_FLAG_MACHINE_TYPE -- 40 (64)
+    CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
+    CT_FLAG_IS_DEFAULT -- 10000 (65536)
+
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3330634377-1326264276-632209373-519G:S-1-5-21-3330634377-1326264276-632209373-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DC)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3330634377-1326264276-632209373-519)(A;;LCRPLORC;;;AU)
+
+    Allow Enroll	LUNAR\Domain Admins
+    Allow Enroll	LUNAR\Domain Computers
+    Allow Enroll	LUNAR\Enterprise Admins
+    Allow Full Control	LUNAR\Domain Admins
+    Allow Full Control	LUNAR\Enterprise Admins
+    Allow Read	NT AUTHORITY\Authenticated Users
+
+
+  TemplatePropExtensions =
+4 Extensions:
+
+  Extension[0]:
+    1.3.6.1.4.1.311.21.7: Flags = 0, Length = 2b
+    Certificate Template Information
+        Template=Workstation Authentication(1.3.6.1.4.1.311.21.8.13251815.15344444.12602244.3735211.11040971.202.1.30)
+        Major Version Number=101
+        Minor Version Number=0
+
+  Extension[1]:
+    2.5.29.37: Flags = 0, Length = c
+    Enhanced Key Usage
+        Client Authentication (1.3.6.1.5.5.7.3.2)
+
+  Extension[2]:
+    2.5.29.15: Flags = 1(Critical), Length = 4
+    Key Usage
+        Digital Signature, Key Encipherment (a0)
+
+  Extension[3]:
+    1.3.6.1.4.1.311.21.10: Flags = 0, Length = e
+    Application Policies
+        [1]Application Certificate Policy:
+             Policy Identifier=Client Authentication
+
+  TemplatePropValidityPeriod = 1 Years
+  TemplatePropRenewalPeriod = 6 Weeks
+CertUtil: -Template command completed successfully.
