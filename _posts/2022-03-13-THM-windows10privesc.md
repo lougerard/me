@@ -332,11 +332,3 @@ _Reverse shell_
 ### Experiment with all four tools, running them with different options. Do all of them identify the techniques used in this room? 
 
 No Answer
-
-```console
-
-```
-{: .nolineno }
-
-![Reverse shell](/images/thm/windows10privesc/windows10privesc_1.png)
-_Reverse shell_
