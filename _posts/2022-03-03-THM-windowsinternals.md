@@ -73,7 +73,7 @@ _Thread Activity filter 2_
 
 I opened the first event from notepad.exe as "thread" and it has thread ID from previous question : 5908 :
 
- ![Thread ID](/images/thm/windowsinternals/windowsinternals_7.png)
+![Thread ID](/images/thm/windowsinternals/windowsinternals_7.png)
 _Thread ID_
 
 Answer : 6584
