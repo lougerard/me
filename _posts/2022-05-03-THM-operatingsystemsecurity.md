@@ -4,7 +4,7 @@ author: CYB3RM3
 name: CYB3RM3 | Operating System Security
 date: 2022-05-03 20:35:53 +0100
 categories: [TryHackMe, RedTeam]
-tags: [Red Team, Privesc, Linux]
+tags: [Red Team, OS]
 ---
 
 This room introduces users to operating system security and demonstrates SSH authentication on Linux.
