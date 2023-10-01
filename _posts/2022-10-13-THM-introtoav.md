@@ -12,8 +12,6 @@ Understand how antivirus software works and what detection techniques are used t
 THM Room [https://tryhackme.com/room/introtoav](https://tryhackme.com/room/introtoav)
 
 ## TASK 1 : Introduction
-
-
 ### Let's get started! 
 
 No Answer
