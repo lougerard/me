@@ -3,8 +3,8 @@ title: Intro to ISAC
 author: CYB3RM3
 name: CYB3RM3 | Intro to ISAC  
 date: 2021-10-02 15:59:25 +0100
-categories: [TryHackMe, introtoisac]
-tags: [introtoisac]
+categories: [TryHackMe, SOC]
+tags: [Introtoisac]
 ---
 
 THM Room [https://tryhackme.com/room/introtoisac](https://tryhackme.com/room/introtoisac)
