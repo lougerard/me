@@ -3,7 +3,7 @@ title: The Lay of the Land
 author: CYB3RM3
 name: CYB3RM3 | The Lay of the Land
 date: 2022-02-03 00:52:49 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Post Compromise]
 tags: [LOTL, Windows]
 ---
 

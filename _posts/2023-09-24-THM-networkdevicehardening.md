@@ -3,8 +3,8 @@ title: Network Device Hardening
 author: CYB3RM3
 name: CYB3RM3 | Network Device Hardening
 date: 2023-09-24 12:43:37 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Network, Hardening, Intro]
+categories: [TryHackMe, Network and System Security]
+tags: [Network, Hardening, Intro, Security Engineer]
 ---
 
 Learn techniques for securing and protecting network devices from potential threats and attacks.

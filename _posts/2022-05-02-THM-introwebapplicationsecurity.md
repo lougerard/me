@@ -3,7 +3,7 @@ title: Web Application Security
 author: CYB3RM3
 name: CYB3RM3 | Web Application Security
 date: 2022-05-02 19:27:53 +0100
-categories: [TryHackMe, Introduction to Cyber Security]
+categories: [TryHackMe, Introduction to Offensive Security]
 tags: [Web, Introduction]
 ---
 

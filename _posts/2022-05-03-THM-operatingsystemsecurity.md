@@ -3,7 +3,7 @@ title: Operating System Security
 author: CYB3RM3
 name: CYB3RM3 | Operating System Security
 date: 2022-05-03 20:35:53 +0100
-categories: [TryHackMe, Introduction to Cyber Security]
+categories: [TryHackMe, Introduction to Offensive Security]
 tags: [Red Team, OS]
 ---
 

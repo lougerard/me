@@ -3,7 +3,7 @@ title: Intro to Digital Forensics
 author: CYB3RM3
 name: CYB3RM3 | Intro to Digital Forensics
 date: 2022-05-03 21:35:53 +0100
-categories: [TryHackMe, Introduction to Cyber Security]
+categories: [TryHackMe, Introduction to Defensive Security]
 tags: [Blue Team, Forensics]
 ---
 

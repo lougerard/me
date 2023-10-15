@@ -3,8 +3,8 @@ title: Introduction to Cryptography
 author: CYB3RM3
 name: CYB3RM3 | Introduction to Cryptography
 date: 2023-09-16 12:41:15 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Cryptography, Intro]
+categories: [TryHackMe, Introduction to Security Engineering]
+tags: [Cryptography, Intro, Security Engineer]
 ---
 
 Learn about encryption algorithms such as AES, Diffie-Hellman key exchange, hashing, PKI, and TLS.

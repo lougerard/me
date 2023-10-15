@@ -3,8 +3,8 @@ title: Identity and Access Management
 author: CYB3RM3
 name: CYB3RM3 | Identity and Access Management
 date: 2023-09-17 10:53:20 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [IAAM, Intro, Access Management, Identity]
+categories: [TryHackMe, Introduction to Security Engineering]
+tags: [IAAM, Intro, Access Management, Identity, Security Engineer]
 ---
 
 Learn about identification, authentication, authorisation, accounting, and identity management.

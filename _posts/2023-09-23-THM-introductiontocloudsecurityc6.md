@@ -3,8 +3,8 @@ title: Intro to Cloud Security
 author: CYB3RM3
 name: CYB3RM3 | Intro to Cloud Security
 date: 2023-09-24 18:43:22 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Cloud, Intro]
+categories: [TryHackMe, Network and System Security]
+tags: [Cloud, Intro, Security Engineer]
 ---
 
 Learn fundamental concepts regarding securing a cloud environment.

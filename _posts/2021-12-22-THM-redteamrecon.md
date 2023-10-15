@@ -3,7 +3,7 @@ title: Red Team Recon
 author: CYB3RM3
 name: CYB3RM3 | Red Team Recon 
 date: 2021-12-22 15:18:49 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Initial Access]
 tags: [Red Team, Reconnaissance]
 ---
 

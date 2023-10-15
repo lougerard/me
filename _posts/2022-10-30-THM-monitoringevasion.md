@@ -3,7 +3,7 @@ title: Evading Logging and Monitoring
 author: CYB3RM3
 name: CYB3RM3 | Evading Logging and Monitoring
 date: 2022-10-30 12:05:23 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Evasion, SOC, Red Team]
 ---
 

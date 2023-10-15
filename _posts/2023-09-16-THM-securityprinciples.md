@@ -3,8 +3,8 @@ title: Security Principles
 author: CYB3RM3
 name: CYB3RM3 | Security Principles
 date: 2023-09-16 09:00:15 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Security Principles]
+categories: [TryHackMe, Introduction to Security Engineering]
+tags: [Security Principles, Security Engineer]
 ---
 
 Learn about the security triad and common security models and principles.

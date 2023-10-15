@@ -3,8 +3,8 @@ title: Linux System Hardening
 author: CYB3RM3
 name: CYB3RM3 | Linux System Hardening
 date: 2023-09-23 11:21:20 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Linux, Hardening, Intro]
+categories: [TryHackMe, Network and System Security]
+tags: [Linux, Hardening, Intro, Security Engineer]
 ---
 
 Learn how to improve the security posture of your Linux systems.

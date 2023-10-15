@@ -3,8 +3,8 @@ title: Microsoft Windows Hardening
 author: CYB3RM3
 name: CYB3RM3 | Microsoft Windows Hardening
 date: 2023-09-23 12:41:15 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Windows, Hardening]
+categories: [TryHackMe, Network and System Security]
+tags: [Windows, Hardening, Security Engineer]
 ---
 
 To learn key attack vectors used by hackers and how to protect yourself using different hardening techniques.

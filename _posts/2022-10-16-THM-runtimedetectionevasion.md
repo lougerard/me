@@ -3,7 +3,7 @@ title: Runtime Detection Evasion
 author: CYB3RM3
 name: CYB3RM3 | Runtime Detection Evasion
 date: 2022-10-16 15:22:31 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Malware, Evasion, SOC, Red Team]
 ---
 

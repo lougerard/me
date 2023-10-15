@@ -3,7 +3,7 @@ title: Security Operations
 author: CYB3RM3
 name: CYB3RM3 | Security Operations
 date: 2022-05-03 20:35:53 +0100
-categories: [TryHackMe, Introduction to Cyber Security]
+categories: [TryHackMe, Introduction to Defensive Security]
 tags: [SOC]
 ---
 

@@ -3,7 +3,7 @@ title: Introduction to Antivirus
 author: CYB3RM3
 name: CYB3RM3 | Introduction to Antivirus
 date: 2022-10-13 11:56:49 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Windows, Antivirus, Introduction]
 ---
 

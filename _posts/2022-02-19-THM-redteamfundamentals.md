@@ -3,7 +3,7 @@ title: Red Team Fundamentals
 author: CYB3RM3
 name: CYB3RM3 | Red Team Fundamentals 
 date: 2022-02-19 10:26:25 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Red Team Fundamentals]
 tags: [Red Team, Fundamentals]
 ---
 

@@ -3,7 +3,7 @@ title: Windows Privilege Escalation
 author: CYB3RM3
 name: CYB3RM3 | Windows Privilege Escalation 
 date: 2022-09-03 16:50:09 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Post Compromise]
 tags: [Privesc, Windows]
 ---
 

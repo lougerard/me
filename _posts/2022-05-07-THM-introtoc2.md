@@ -3,7 +3,7 @@ title: Intro to C2
 author: CYB3RM3
 name: CYB3RM3 | Intro to C2
 date: 2022-05-07 13:40:52 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Red Team Fundamentals]
 tags: [Red Team, C2, Engagement]
 ---
 

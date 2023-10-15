@@ -3,8 +3,8 @@ title: Auditing and Monitoring
 author: CYB3RM3
 name: CYB3RM3 | Auditing and Monitoring
 date: 2023-09-24 18:26:10 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Audit, Monitoring, SIEM, Intro]
+categories: [TryHackMe, Network and System Security]
+tags: [Audit, Monitoring, SIEM, Intro, Security Engineer]
 ---
 
 Learn about auditing, monitoring, logging, and SIEM.

@@ -3,8 +3,8 @@ title: Active Directory Hardening
 author: CYB3RM3
 name: CYB3RM3 | Active Directory Hardening
 date: 2023-09-24 11:51:58 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [AD, Active Directory, Hardening, Intro]
+categories: [TryHackMe, Network and System Security]
+tags: [AD, Active Directory, Hardening, Intro, Security Engineer]
 ---
 
 To learn basic concepts regarding Active Directory attacks and mitigation measures.

@@ -3,7 +3,7 @@ title: Red Team Threat Intel
 author: CYB3RM3
 name: CYB3RM3 | Red Team Threat Intel 
 date: 2022-04-02 12:52:00 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Red Team Fundamentals]
 tags: [Red Team, Threat Intelligence]
 ---
 

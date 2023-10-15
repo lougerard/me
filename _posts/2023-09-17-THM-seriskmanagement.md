@@ -3,8 +3,8 @@ title: Risk Management
 author: CYB3RM3
 name: CYB3RM3 | Risk Management
 date: 2023-09-17 19:00:00 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Risk Management, Assessment, Intro]
+categories: [TryHackMe, Threats and Risks]
+tags: [Risk Management, Assessment, Intro, Security Engineer]
 ---
 
 Learn about framing, assessing, responding, and monitoring risk.

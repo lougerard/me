@@ -3,7 +3,7 @@ title: Weaponization
 author: CYB3RM3
 name: CYB3RM3 | Weaponization  
 date: 2021-12-26 21:50:07 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Initial Access]
 tags: [Red Team, Weaponization]
 ---
 

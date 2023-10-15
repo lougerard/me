@@ -3,7 +3,7 @@ title: Password Attacks
 author: CYB3RM3
 name: CYB3RM3 | Password Attacks
 date: 2022-04-16 12:58:26 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Initial Access]
 tags: [Red Team, Password Attack]
 ---
 

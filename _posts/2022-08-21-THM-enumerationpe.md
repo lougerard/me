@@ -3,7 +3,7 @@ title: Enumeration
 author: CYB3RM3
 name: CYB3RM3 | Enumeration 
 date: 2022-08-21 10:43:05 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Post Compromise]
 tags: [Enumeration, Collect Intels, Red Team]
 ---
 

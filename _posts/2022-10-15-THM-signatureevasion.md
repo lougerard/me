@@ -3,7 +3,7 @@ title: Signature Evasion
 author: CYB3RM3
 name: CYB3RM3 | Signature Evasion
 date: 2022-10-15 15:42:57 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Malware, Evasion, SOC, Red Team]
 ---
 

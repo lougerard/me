@@ -3,7 +3,7 @@ title: Red Team Engagements
 author: CYB3RM3
 name: CYB3RM3 | Red Team Engagements 
 date: 2022-02-19 17:24:46 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Red Team Fundamentals]
 tags: [Red Team, Engagements]
 ---
 

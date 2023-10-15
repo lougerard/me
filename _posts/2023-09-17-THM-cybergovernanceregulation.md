@@ -3,8 +3,8 @@ title: Governance & Regulation
 author: CYB3RM3
 name: CYB3RM3 | Governance & Regulation
 date: 2023-09-17 14:39:10 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Governance, Regulation, Intro]
+categories: [TryHackMe, Threats and Risks]
+tags: [Governance, Regulation, Intro, Security Engineer]
 ---
 
 Explore policies and frameworks vital for regulating cyber security in an organisation.

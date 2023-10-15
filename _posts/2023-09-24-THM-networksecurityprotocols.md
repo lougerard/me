@@ -3,8 +3,8 @@ title: Network Security Protocols
 author: CYB3RM3
 name: CYB3RM3 | Network Security Protocols
 date: 2023-09-24 17:09:15 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Network, Intro]
+categories: [TryHackMe, Network and System Security]
+tags: [Network, Intro, Security Engineer]
 ---
 
 Learn about secure network protocols at the different layers of the OSI model.

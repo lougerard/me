@@ -3,7 +3,7 @@ title: Firewalls
 author: CYB3RM3
 name: CYB3RM3 | Firewalls 
 date: 2022-02-26 15:13:50 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Network Security Evasion]
 tags: [Red Team, Firewall, Network, Evasion]
 ---
 

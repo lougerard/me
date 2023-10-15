@@ -3,7 +3,7 @@ title: Introduction to Windows API
 author: CYB3RM3
 name: CYB3RM3 | Introduction to Windows API
 date: 2022-10-13 09:57:51 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Windows, API, Introduction]
 ---
 

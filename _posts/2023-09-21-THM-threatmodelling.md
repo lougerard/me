@@ -3,8 +3,8 @@ title: Threat Modelling
 author: CYB3RM3
 name: CYB3RM3 | Threat Modelling
 date: 2023-09-21 12:41:15 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Threat, Vulnerability, Model]
+categories: [TryHackMe, Threats and Risks]
+tags: [Threat, Vulnerability, Model, Security Engineer]
 ---
 
 Building cyber resiliency and emulation capabilities through threat modelling.

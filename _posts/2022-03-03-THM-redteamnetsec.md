@@ -3,7 +3,7 @@ title: Network Security Solutions
 author: CYB3RM3
 name: CYB3RM3 | Network Security Solutions  
 date: 2022-03-03 09:48:01 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Network Security Evasion]
 tags: [Red Team, Network]
 ---
 

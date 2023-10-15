@@ -3,7 +3,7 @@ title: Obfuscation Principles
 author: CYB3RM3
 name: CYB3RM3 | Obfuscation Principles
 date: 2022-10-14 12:07:23 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Malware, Obfuscation, SOC, Red Team]
 ---
 

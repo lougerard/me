@@ -3,7 +3,7 @@ title: Living Off the Land
 author: CYB3RM3
 name: CYB3RM3 | Living Off the Land
 date: 2022-12-10 11:55:04 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Persistance, Red Team, LOLBAS, Bypass]
 ---
 

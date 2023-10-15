@@ -3,8 +3,8 @@ title: Secure Network Architecture
 author: CYB3RM3
 name: CYB3RM3 | Secure Network Architecture
 date: 2023-09-17 19:30:25 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Network, Architecture, Intro]
+categories: [TryHackMe, Network and System Security]
+tags: [Network, Architecture, Intro, Security Engineer]
 ---
 
 Learn about and implement security best practices for network environments.

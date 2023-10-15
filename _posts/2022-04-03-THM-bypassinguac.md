@@ -3,7 +3,7 @@ title: Bypassing UAC
 author: CYB3RM3
 name: CYB3RM3 | Bypassing UAC
 date: 2022-04-03 20:51:36 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Red Team, UAC]
 ---
 

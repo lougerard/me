@@ -3,7 +3,7 @@ title: AV Evasion - Shellcode
 author: CYB3RM3
 name: CYB3RM3 | AV Evasion - Shellcode
 date: 2022-11-13 12:50:21 +0100
-categories: [TryHackMe, Red Teaming]
+categories: [TryHackMe, Host Evasions]
 tags: [Malware, Evasion, SOC, Red Team, Packers, Shellcode]
 ---
 

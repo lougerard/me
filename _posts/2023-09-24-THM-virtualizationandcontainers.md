@@ -3,8 +3,8 @@ title: Virtualization and Containers
 author: CYB3RM3
 name: CYB3RM3 | Virtualization and Containers
 date: 2023-09-24 17:43:22 +0100
-categories: [TryHackMe, Security Engineer]
-tags: [Virtualization, Container, Intro]
+categories: [TryHackMe, Network and System Security]
+tags: [Virtualization, Container, Intro, Security Engineer]
 ---
 
 Introduction to common virtualization technologies and applications.
