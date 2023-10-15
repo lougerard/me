@@ -3,8 +3,8 @@ title: Red Team Engagements
 author: CYB3RM3
 name: CYB3RM3 | Red Team Engagements 
 date: 2022-02-19 17:24:46 +0100
-categories: [TryHackMe, RedTeam]
-tags: [RedTeam, Engagements]
+categories: [TryHackMe, Red Teaming]
+tags: [Red Team, Engagements]
 ---
 
 Learn the steps and procedures of a red team engagement, including planning, frameworks, and documentation.

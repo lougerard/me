@@ -3,8 +3,8 @@ title: Weaponization
 author: CYB3RM3
 name: CYB3RM3 | Weaponization  
 date: 2021-12-26 21:50:07 +0100
-categories: [TryHackMe, RedTeam]
-tags: [Red Team]
+categories: [TryHackMe, Red Teaming]
+tags: [Red Team, Weaponization]
 ---
 
 Understand and explore common red teaming weaponization techniques. You will learn to build custom payloads using common methods seen in the industry to get initial access.

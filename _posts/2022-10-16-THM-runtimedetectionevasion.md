@@ -3,8 +3,8 @@ title: Runtime Detection Evasion
 author: CYB3RM3
 name: CYB3RM3 | Runtime Detection Evasion
 date: 2022-10-16 15:22:31 +0100
-categories: [TryHackMe, RedTeam]
-tags: [Malware, Evasion, SOC, RedTeam]
+categories: [TryHackMe, Red Teaming]
+tags: [Malware, Evasion, SOC, Red Team]
 ---
 
 Learn how to bypass common runtime detection measures, such as AMSI, using modern tool-agnostic approaches.

@@ -3,7 +3,7 @@ title:  Network Security
 author: CYB3RM3
 name: CYB3RM3 | Network Security 
 date: 2022-05-03 21:42:57 +0100
-categories: [TryHackMe, RedTeam]
+categories: [TryHackMe, Introduction to Cyber Security]
 tags: [Red Team, Network]
 ---
 

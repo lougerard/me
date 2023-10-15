@@ -3,7 +3,7 @@ title: Data Exfiltration
 author: CYB3RM3
 name: CYB3RM3 | Data Exfiltration
 date: 2022-10-12 09:40:29 +0100
-categories: [TryHackMe, Exfiltration]
+categories: [TryHackMe, Red Teaming]
 tags: [DNS, Cloud, Exfiltration]
 ---
 

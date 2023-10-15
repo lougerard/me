@@ -3,7 +3,7 @@ title: Active Directory Basics
 author: CYB3RM3
 name: CYB3RM3 | Active Directory Basics 
 date: 2022-10-12 09:12:30 +0100
-categories: [TryHackMe, Windows]
+categories: [TryHackMe, Red Teaming]
 tags: [Active Directory, Windows, AD, Server]
 ---
 

@@ -3,8 +3,8 @@ title: Enumeration
 author: CYB3RM3
 name: CYB3RM3 | Enumeration 
 date: 2022-08-21 10:43:05 +0100
-categories: [TryHackMe, Red Team]
-tags: [Enumeration, Collect Intels]
+categories: [TryHackMe, Red Teaming]
+tags: [Enumeration, Collect Intels, Red Team]
 ---
 
 This room is an introduction to enumeration when approaching an unknown corporate environment.

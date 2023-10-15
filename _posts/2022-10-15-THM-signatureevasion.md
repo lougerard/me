@@ -3,8 +3,8 @@ title: Signature Evasion
 author: CYB3RM3
 name: CYB3RM3 | Signature Evasion
 date: 2022-10-15 15:42:57 +0100
-categories: [TryHackMe, RedTeam]
-tags: [Malware, Evasion, SOC, RedTeam]
+categories: [TryHackMe, Red Teaming]
+tags: [Malware, Evasion, SOC, Red Team]
 ---
 
 Learn how to break signatures and evade common AV, using modern tool-agnostic approaches.

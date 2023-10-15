@@ -3,8 +3,8 @@ title: Firewalls
 author: CYB3RM3
 name: CYB3RM3 | Firewalls 
 date: 2022-02-26 15:13:50 +0100
-categories: [TryHackMe, RedTeam]
-tags: [RedTeam, Firewall, Network, Evasion]
+categories: [TryHackMe, Red Teaming]
+tags: [Red Team, Firewall, Network, Evasion]
 ---
 
 Learn about and experiment with various firewall evasion techniques, such as port hopping and port tunneling.

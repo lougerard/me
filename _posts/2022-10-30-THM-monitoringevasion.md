@@ -3,8 +3,8 @@ title: Evading Logging and Monitoring
 author: CYB3RM3
 name: CYB3RM3 | Evading Logging and Monitoring
 date: 2022-10-30 12:05:23 +0100
-categories: [TryHackMe, RedTeam]
-tags: [Evasion, SOC, RedTeam]
+categories: [TryHackMe, Red Teaming]
+tags: [Evasion, SOC, Red Team]
 ---
 
 Learn how to bypass common logging and system monitoring, such as ETW, using modern tool-agnostic approaches.

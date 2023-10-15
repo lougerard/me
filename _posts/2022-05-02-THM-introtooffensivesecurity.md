@@ -3,8 +3,8 @@ title: Intro to Offensive Security
 author: CYB3RM3
 name: CYB3RM3 | Intro to Offensive Security
 date: 2022-05-02 19:53:26 +0100
-categories: [TryHackMe, Red Team]
-tags: [Web, Introduction, Offensive Security]
+categories: [TryHackMe, Introduction to Cyber Security]
+tags: [Web, Introduction, Offensive Security, Red Team]
 ---
 
 Hack your first website (legally in a safe environment) and experience an ethical hacker's job.

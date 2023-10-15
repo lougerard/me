@@ -3,8 +3,8 @@ title: Obfuscation Principles
 author: CYB3RM3
 name: CYB3RM3 | Obfuscation Principles
 date: 2022-10-14 12:07:23 +0100
-categories: [TryHackMe, RedTeam]
-tags: [Malware, Obfuscation, SOC, RedTeam]
+categories: [TryHackMe, Red Teaming]
+tags: [Malware, Obfuscation, SOC, Red Team]
 ---
 
 Leverage tool-agnostic software obfuscation practices to hide malicious functions and create unique code.

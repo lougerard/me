@@ -3,8 +3,8 @@ title: Red Team Fundamentals
 author: CYB3RM3
 name: CYB3RM3 | Red Team Fundamentals 
 date: 2022-02-19 10:26:25 +0100
-categories: [TryHackMe, RedTeam]
-tags: [RedTeam, Fundamentals]
+categories: [TryHackMe, Red Teaming]
+tags: [Red Team, Fundamentals]
 ---
 
 Learn about the basics of a red engagement, the main components and stakeholders involved, and how red teaming differs from other cyber security engagements.

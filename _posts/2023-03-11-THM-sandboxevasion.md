@@ -3,8 +3,8 @@ title: Sandbox Evasion
 author: CYB3RM3
 name: CYB3RM3 | Sandbox Evasion
 date: 2023-03-11 14:02:37 +0100
-categories: [TryHackMe, RedTeam]
-tags: [RedTeam, Intrusion, Sandbox, Evasion]
+categories: [TryHackMe, Red Teaming]
+tags: [Red Team, Intrusion, Sandbox, Evasion]
 ---
 
 Learn about active defense mechanisms Blue Teamers can deploy to identify adversaries in their environment.

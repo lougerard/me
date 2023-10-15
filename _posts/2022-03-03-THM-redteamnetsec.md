@@ -3,8 +3,8 @@ title: Network Security Solutions
 author: CYB3RM3
 name: CYB3RM3 | Network Security Solutions  
 date: 2022-03-03 09:48:01 +0100
-categories: [TryHackMe, RedTeam]
-tags: [Red Team]
+categories: [TryHackMe, Red Teaming]
+tags: [Red Team, Network]
 ---
 
 Learn about and experiment with various IDS/IPS evasion techniques, such as protocol and payload manipulation.
