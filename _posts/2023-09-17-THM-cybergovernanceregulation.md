@@ -88,7 +88,7 @@ Answer : availability
 
 ## TASK 8 Conclusion 
 ### Click the View Site button at the top of the task to launch the static site in split view. What is the flag after completing the exercise? 
-[Flag](/images/thm/cybergovernanceregulation/gevern_1.png)
+[Flag](/images/thm/cybergovernanceregulation/govern_1.png)
 _Flag_
 
 Answer : THM{SECURE_1001}
