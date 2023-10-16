@@ -22,15 +22,28 @@ Answer : Front End
 No Answer.
 
 ### One of the images on the cat website is broken - fix it, and the image will reveal the hidden text answer!
-Answer : HTMLHERO
+Answer : 
 
-### Add a dog image to the page by adding another img tag (<img>) on line 11. The dog image location is img/dog-1.png. What is the text in the dog image?
-Answer : DOGHTML
+```console
+HTMLHERO
+```
+{: .nolineno }
+
+### Add a dog image to the page by adding another img tag (< img >) on line 11. The dog image location is img/dog-1.png. What is the text in the dog image?
+Answer : 
+
+```console
+DOGHTML
+```
+{: .nolineno }
 
 ## TASK 3 JavaScript
-
 ### Click the "View Site" button on this task. On the right-hand side, add JavaScript that changes the demo element's content to "Hack the Planet"
-Answer : JSISFUN
+Answer : 
+```console
+JSISFUN
+```
+{: .nolineno }
 
 ### Add the button HTML from this task that changes the element's text to "Button Clicked" on the editor on the right, update the code by clicking the "Render HTML+JS Code" button and then click the button.
 No Answer.
@@ -40,5 +53,5 @@ No Answer.
 Answer : testpasswd
 
 ## TASK 5 HTML Injection
-### View the website on this task and inject HTML so that a malicious link to http://hacker.com is shown. 
+### View the website on this task and inject HTML so that a malicious [link to hacker.com](http://hacker.com) is shown. 
 Answer : HTML_INJ3CTI0N

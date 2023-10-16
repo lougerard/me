@@ -4,7 +4,7 @@ author: CYB3RM3
 name: CYB3RM3 | OSI Model
 date: 2023-10-15 14:34:15 +0100
 categories: [TryHackMe, Network Fundamentals]
-tags: [OSI, Model, Intro]
+tags: [OSI, Model, Intro, Pre Security]
 ---
 
 Learn about the fundamental networking framework that determines the various stages in which data is handled across a network

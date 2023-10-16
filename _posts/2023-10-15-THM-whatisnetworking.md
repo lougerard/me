@@ -4,7 +4,7 @@ author: CYB3RM3
 name: CYB3RM3 | What is Networking?
 date: 2023-10-15 14:23:15 +0100
 categories: [TryHackMe, Network Fundamentals]
-tags: [Network, Intro]
+tags: [Network, Intro, Pre Security]
 ---
 
 Begin learning the fundamentals of computer networking in this bite-sized and interactive module.

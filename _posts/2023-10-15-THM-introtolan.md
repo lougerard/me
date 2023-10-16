@@ -4,7 +4,7 @@ author: CYB3RM3
 name: CYB3RM3 | Intro to LAN
 date: 2023-10-15 14:28:15 +0100
 categories: [TryHackMe, Network Fundamentals]
-tags: [LAN, Intro]
+tags: [LAN, Intro, Pre Security]
 ---
 
 Learn about some of the technologies and designs that power private networks
