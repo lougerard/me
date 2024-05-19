@@ -13,6 +13,7 @@ THM Room : [https://tryhackme.com/room/adventofcyber2023](https://tryhackme.com/
 
 ## TASK 7 [Day 1] Machine learning Chatbot, tell me, if you're really safe?
 ### What is McGreedy's personal email address?
+<!-- 
 
 ![McGreedy's Email](/images/thm/adventofcyber2023/adventofcyber2023_2.png)
 _McGreedy's Email_
@@ -121,4 +122,4 @@ Testing the found password on the door :
 _code_
 
 ![Flag](/images/thm/adventofcyber2023/adventofcyber2023_9.png)
-_flag_
+_flag_ -->
