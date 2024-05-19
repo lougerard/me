@@ -3,12 +3,17 @@ icon: fas fa-certificate
 order: 2
 ---
 
-### SOC Analyst & Offensive Security Engineer - Assyst Europe, BE
-February, 2023 - present
+### SOC Analyst Tier 2 - Nexova, BE
+May, 2024 - present
 
-I'm a SOC Analyst on the TEHTRIS XDR platform.
-I also analyse threats and security news and advisories related to Assyst Europe client's infrastructure and services.
-I build and implement Red Team scenarios to showcase cybersecurity risks. 
+Currently working as SOC Analyst T2.
+
+### SOC Analyst & Offensive Security Engineer - Assyst Europe, BE
+February, 2023 - April, 2024
+
+I worked as a SOC Analyst on the TEHTRIS XDR platform.
+I also analysed threats and security news and advisories related to Assyst Europe client's infrastructure and services.
+I built and implemented Red Team scenarios to showcase cybersecurity risks. 
 Some of these scenarios where shown on our stand during the CyberSec Europe 2023 event in Brussels.
 
 ### ICT Integrator - Assyst Europe, BE
