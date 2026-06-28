@@ -3,15 +3,19 @@ icon: fas fa-certificate
 order: 2
 ---
 
-### SOC Analyst Tier 2 - Nexova, BE
-May, 2024 - present
+### SOC Team Lead - Tier 3 Analyst - Nexova, BE
+January, 2025 - Present
 
-Currently working as SOC Analyst T2.
+### SOC Analyst Tier 2 - Nexova, BE
+May, 2024 - December, 2025
+
+Initially operating as Tier 2 analyst, progressively taking on Team Lead and Tier 3 responsibilities from November
+2024, contributing to incident coordination and stakeholder engagement.
 
 ### SOC Analyst & Offensive Security Engineer - Assyst Europe, BE
 February, 2023 - April, 2024
 
-I worked as a SOC Analyst on the TEHTRIS XDR platform.
+I worked as a SOC Analyst on a XDR platform.
 I also analysed threats and security news and advisories related to Assyst Europe client's infrastructure and services.
 I built and implemented Red Team scenarios to showcase cybersecurity risks. 
 Some of these scenarios where shown on our stand during the CyberSec Europe 2023 event in Brussels.
@@ -19,7 +23,7 @@ Some of these scenarios where shown on our stand during the CyberSec Europe 2023
 ### ICT Integrator - Assyst Europe, BE
 July 1, 2019 - January, 2023
 
-I worked as ICT Integrator at Assyst Europe in a team, managing networks infrastructure of clients like Law Firms, European Representation in Brussel and PME's. Member of the security team of Assyst Europe, our team manage security advisories and incidents like data breaches.
+I worked as ICT Integrator at Assyst Europe in a team, managing networks infrastructure of clients like Law Firms, European Representation in Brussel and PME's. Member of the security team of Assyst Europe, our team manage firewalls, security advisories analysis and remediations and security incidents like data breaches.
 
 ### Student - CHU-UCL Mont-Godinne, BE 
 February 11, 2019 - May 17, 2019
