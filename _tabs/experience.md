@@ -23,6 +23,7 @@ Some of these scenarios where shown on our stand during the CyberSec Europe 2023
 ### ICT Integrator - Assyst Europe, BE
 July 1, 2019 - January, 2023
 
+Held the internal title of ICT Integrator but initially operated as a Network and Systems Administration engineer, progressively transitioning into IT Security engineering with a focus on firewall management and cybersecurity
 I worked as ICT Integrator at Assyst Europe in a team, managing networks infrastructure of clients like Law Firms, European Representation in Brussel and PME's. Member of the security team of Assyst Europe, our team manage firewalls, security advisories analysis and remediations and security incidents like data breaches.
 
 ### Student - CHU-UCL Mont-Godinne, BE 
